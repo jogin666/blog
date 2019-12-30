@@ -4,27 +4,26 @@
 
 1. HashSet
 
-   * 底层数据结构为哈希表+链表/红黑树
-   * 非同步（线程不安全），不保证有序
-   * 元素不能重复，允许为null
+   - 底层数据结构为哈希表+链表/红黑树
+   - 非同步（线程不安全），不保证有序
+   - 元素不能重复，允许为null
 
    > 注：HashSet的底层实现是HashMap，HashSet存储的元素为HashMap的key值，所有的value都是同一个Object的实例。
 
 2. TreeSet
 
-   * 底层数据结构为红黑树
-   * 非同步，保证有序
-   * 元素不能重复，且不能为null
+   - 底层数据结构为红黑树
+   - 非同步，保证有序
+   - 元素不能重复，且不能为null
 
    > 注：TreeSet的底层实现是TreeMap。TreeSet存储的元素为TreeSet的key值，所有的value都是同一个Object的实例。
 
 3. LinkedHasgSet
 
-   * 底层数据接口是哈希表（元素为链表的数据）+双链表实现的。
-   * 非同步，保证有序
-   * 元素不能重复，允许为null
-
-   * 迭代时，内部使用的是双链表的迭代
+   - 底层数据接口是哈希表（元素为链表的数据）+双链表实现的。
+   - 非同步，保证有序
+   - 元素不能重复，允许为null
+   - 迭代时，内部使用的是双链表的迭代
 
    > 注：LinkedHashSet的底层实现是LinkedHashMap，LinkedHashSet存储的元素为LinkedHashSet的key值，所有的value都是同一个Object的实例。
 
@@ -38,7 +37,7 @@
 
 **2.2 、HashSet的结构**
 
-* 构造函数与成员
+- 构造函数与成员
 
 ```java
 public class HashSet<E> extends AbstractSet<E>
@@ -58,7 +57,7 @@ public class HashSet<E> extends AbstractSet<E>
 }
 ```
 
-* 部分常用方法
+- 部分常用方法
 
 ```java
 public boolean add(E e) {
@@ -78,7 +77,7 @@ public Iterator<E> iterator() {
 
 > 注：可以看出，HashSet实际上就是封装了HashMap，操作HashSet元素实际上就是操作HashMap。
 
-对HashMap还不太了解的话，传送门：<a href="">HashMap深入源码学习</a>
+对HashMap还不太了解的话，传送门：<a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/HashMap.md">HashMap深入源码学习</a>
 
 
 
@@ -86,11 +85,11 @@ public Iterator<E> iterator() {
 
 **3.1 继承图**
 
-![TreeSet的继承图](https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/images/LinkedHashSet%E7%BB%A7%E6%89%BF%E5%9B%BE.png)
+![TreeSet的继承图](https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/images/TreeSet%E7%9A%84%E7%BB%A7%E6%89%BF%E5%9B%BE.png)
 
 **3.2、TreeSet的结构**
 
-*  成员与构造函数
+- 成员与构造函数
 
 ```java
 public class TreeSet<E> extends AbstractSet<E>
@@ -112,7 +111,7 @@ public class TreeSet<E> extends AbstractSet<E>
 }
 ```
 
-* 部分常用方法
+- 部分常用方法
 
 ```java
 public boolean add(E e) {
@@ -142,15 +141,17 @@ public Iterator<E> iterator() {
 
 > 可以知道：TreeSet实际上就是封装了TreeSet，操作TreeSet元素实际上就是操作TreeMap。
 
-对TreeMap还不太了解的话，传送门：<a href="">TreeMap深入源码学习</a>
+对TreeMap还不太了解的话，传送门：<a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/TreeMap.md">TreeMap深入源码学习</a>
 
-### 三、LinkedHashSet介绍
 
-**3.1、继承图**
 
-![LinkedHashSet继承图](https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/images/TreeSet%E7%9A%84%E7%BB%A7%E6%89%BF%E5%9B%BE.png)
+### 四、LinkedHashSet介绍
 
-**3.2、LinkedHashSet源码**
+**4.1、继承图**
+
+![LinkedHashSet继承图](https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/images/LinkedHashSet%E7%BB%A7%E6%89%BF%E5%9B%BE.png)
+
+**4.2、LinkedHashSet源码**
 
 ```java
 public class LinkedHashSet<E> extends HashSet<E>
@@ -190,5 +191,5 @@ HashSet(int initialCapacity, float loadFactor, boolean dummy) {
 
 > 可以知道：LinkedHashSet实际上就是封装了LinkedHashMap，操作LinkedHashSet元素实际上就是操作LinkedHashMap。
 
-对LinkedHashMap还不太了解的话，传送门：<a href="">LinkedHashMap深入源码学习</a>
+对LinkedHashMap还不太了解的话，传送门：<a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/LinkedHashMap.md">LinkedHashMap深入源码学习</a>
 
