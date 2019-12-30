@@ -85,7 +85,7 @@ public boolean addAll(int index, Collection<? extends E> c) {
 
 象锁的线程有"钥匙"打开锁,或者换句话说，一个类所有使用同一对象锁的synchronized修饰代码为一个临界资
 
-源。不太了解Synchronized的话，传送门：<a href="">Synchronized详解</a>
+源。不太了解Synchronized的话，传送门：<a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E9%94%81/synchronized%E8%AF%A6%E8%A7%A3.md">Synchronized详解</a>
 
 ```java
 class Test{
@@ -357,7 +357,7 @@ CopyOnWriteArrayList的底层数据结构和ArrayList一样都是数组，使用
 
 在前面的快速失败机制原理的讲解中，可以了解到Java的List，Map，Set在迭代器迭代的过程中，多线程对容器
 
-类里的数据进行修改时，容易会造成快速失败事件。传送门：<a href="">快速失败机制讲解</a>
+类里的数据进行修改时，容易会造成快速失败事件。传送门：<a href="https://github.com/jogin666/blog/blob/master/resource/java/%E9%9B%86%E5%90%88/fast-fail.md">快速失败机制讲解</a>
 
 ```java
 public static void main(String args[]){
