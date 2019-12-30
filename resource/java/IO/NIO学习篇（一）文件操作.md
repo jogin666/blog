@@ -1,6 +1,6 @@
 ## NO文件学习——文件读写篇
 
-及上一篇章之后《 <a href="">传统IO系统学习</a> 》系统的学习Java的IO之后，现在开始学习进阶版的IO——NIO。为啥要学
+及上一篇章之后《 <a href="https://github.com/jogin666/blog/blob/master/resource/java/IO/%E4%BC%A0%E7%BB%9FIO%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0.md">传统IO系统学习</a> 》系统的学习Java的IO之后，现在开始学习进阶版的IO——NIO。为啥要学
 
 习NIO呢？因为NIO相对传统的IO，其在 **文件操作** 和 **网络传送** 中有着重大的优势，尤其是网络传输方面。其实
 
