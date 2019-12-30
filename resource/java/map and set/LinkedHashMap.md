@@ -17,7 +17,7 @@
 
 **LinkedHashMap数据结构图**：
 
-![LinkedHashMap数据结构图](https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/images/LinkeddHashMap.png)
+![LinkedHashMap数据结构图](https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/images/LinkedHashMap%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9B%BE.png)
 
 图片来源与参考资料
 
