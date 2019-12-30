@@ -2,7 +2,7 @@
 
 在上一篇章中，讲述了 Spring Cloud 的概念和相关组件，此篇章将讲述 Spring Cloud 的入门。此篇章内容是在上
 
-一篇章的基础上讲述的，详情请看 《<a href="">Spring Cloud 篇章（一）知识概念篇</a>》
+一篇章的基础上讲述的，详情请看 《<a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring%20cloud/Spring%20Cloud%20%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E7%9F%A5%E8%AF%86%E6%A6%82%E5%BF%B5%E7%AF%87.md">Spring Cloud 篇章（一）知识概念篇</a>》
 
 
 
