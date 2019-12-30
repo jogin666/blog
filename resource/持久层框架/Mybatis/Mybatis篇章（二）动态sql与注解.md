@@ -1,12 +1,12 @@
 ## Mybatis篇章（二）动态sql语句与注解
 
-继上一篇章《<a href="https://github.com/jogin666/Database-Persistence-Framework/blob/master/mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87.md">Mybatis篇章（一）入门篇</a>》之后，已经知道了Mybatis是如何使用的了 ，此篇章将介绍如何
+继上一篇章《<a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87.md">Mybatis篇章（一）入门篇</a>》之后，已经知道了Mybatis是如何使用的了 ，此篇章将介绍如何
 
 在mybatis中使用动态sql。
 
 **1、动态查询**
 
-mybatis提供了<where> 节点和<if>节点配合使用，完成动态查询。例如：
+mybatis提供了 where 节点和 if 节点配合使用，完成动态查询。例如：
 
 ```xml
 <!--
@@ -55,7 +55,7 @@ public void testFindStuByConditions(){
 
 **2、动态更新**
 
-mybatis的动态更新是：<set>和<if>搭配使用实现的。
+mybatis的动态更新是：set 和 if 搭配使用实现的。
 
 ```xml
 <!--
@@ -100,7 +100,7 @@ public void testUpdateStuById(){
 
 **3、动态删除**
 
-对于mybatis的删除主要的讲一下删除多个吧。回顾一下，在sql中，如果要删除多个，该怎么实现呢？那就是使用 *where id in ( x, x, x,)* 。为此mybatis提供一个节点 <foreach>循环遍历。
+对于mybatis的删除主要的讲一下删除多个吧。回顾一下，在sql中，如果要删除多个，该怎么实现呢？那就是使用 *where id in ( x, x, x,)* 。为此mybatis提供一个节点  foreach 循环遍历。
 
 ```xml
 <delete id="deleteStuById" parameterType="list">
