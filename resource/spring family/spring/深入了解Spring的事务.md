@@ -1,4 +1,4 @@
-## 深入了解Spring事物
+## 深入了解Spring事务
 
 写在前面：原文地址  <a href="https://blog.csdn.net/mawenshu316143866/article/details/81281443 ">深入理解Spring事务的基本原理、传播属性、隔离级别</a>
 
