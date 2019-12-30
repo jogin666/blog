@@ -4,7 +4,7 @@
 
 数据流的形式操作，而不是单个单个元素的操作结合中的数据。
 
-观看此文章需要有Lambda和函数式的基础，传送门<a href="https://github.com/jogin666/Java/blob/master/java8新特性/Lambda和函数式.md">Lambda表达式和函数式</a>
+观看此文章需要有Lambda和函数式的基础，传送门 <a href="https://github.com/jogin666/blog/blob/master/resource/java/jdk8%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7/Lambda%E5%92%8C%E5%87%BD%E6%95%B0%E5%BC%8F.md">Lambda表达式和函数式</a>
 
 ### 体验数据流
 
