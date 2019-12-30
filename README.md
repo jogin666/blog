@@ -97,7 +97,7 @@
 
 ### 二、数据结构与算法
 
-**1、用Java实现数据机构**
+**1、用Java实现数据结构**
 
 - <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8.md">链表</a>
 - <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%88.md">栈</a>
