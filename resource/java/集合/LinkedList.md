@@ -18,7 +18,7 @@
 
 1. 继承图
 
-![LinkedList](https://github.com/jogin666/blog/blob/master/resource/java/%E9%9B%86%E5%90%88/images/Queue%E6%8E%A5%E5%8F%A3%E6%96%B9%E6%B3%95%E5%9B%BE.png)
+![LinkedList](https://github.com/jogin666/blog/blob/master/resource/java/%E9%9B%86%E5%90%88/images/LinkedList.jpg)
 
 图片来源参考资料  侵删
 
