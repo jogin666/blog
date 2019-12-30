@@ -1,6 +1,6 @@
 ## Mybatis篇章（三）映射文件
 
-在前面两个篇章《<a href="https://github.com/jogin666/Database-Persistence-Framework/blob/master/mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87.md">Mybatis篇章（一）入门篇</a>》和《<a href="https://github.com/jogin666/Database-Persistence-Framework/blob/master/mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8A%A8%E6%80%81sql%E4%B8%8E%E6%B3%A8%E8%A7%A3.md">Mybatis篇章（二）动态sql语句</a>》，主要介绍mybatis的入门
+在前面两个篇章《<a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87.md">Mybatis篇章（一）入门篇</a>》和《<a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8A%A8%E6%80%81sql%E4%B8%8E%E6%B3%A8%E8%A7%A3.md">Mybatis篇章（二）动态sql语句</a>》，主要介绍mybatis的入门
 
 使用操作（crud）和讲解了mybatis的动态sql语句和sql片段，接下来这一篇章将讲述MyBatis的实体与表之间关
 
@@ -148,7 +148,7 @@ public class Card {
 
 在Student类中增加Card的成员: *private Card card;* 和对应的 getter、setter 方法。在StudentMapper.xml文件添
 
-加一个 *select* 节点查询和新添加一个继承 *studentMap* 的<ResultMap>节点，新增内容如下图：
+加一个 *select* 节点查询和新添加一个继承 *studentMap* 的 *ResultMap* 节点，新增内容如下图：
 
 ```xml
 <select id="findStuAndCard" resultMap="stuCardMap" parameterType="string">
@@ -170,7 +170,7 @@ public class Card {
 </resultMap>
 ```
 
-<asociation>节点中javaType指定查询结果返回的类型。
+*asociation* 节点中javaType指定查询结果返回的类型。
 
 然后在StudentMapper接口添加一个查询方法和StudentMapperImpl实现添加的方法，在单元测试中，测试一下
 
@@ -225,7 +225,7 @@ public class SCourse {
 
 在Student实体类添加 *private List<SCourse> courses;* 并给出相应的 *getter 和 setter* 方法StudentMapper.xml文
 
-件添加一个 *select* 查询节点和新添加一个继承 *studentMap* 的<ResultMap>节点，新增内容如下图：
+件添加一个 *select* 查询节点和新添加一个继承 *studentMap* 的 *ResultMap *节点，新增内容如下图：
 
 ```xml
 <select id="findCourseByStuId" resultMap="stuCourseMap" parameterType="string">
@@ -242,7 +242,7 @@ public class SCourse {
 </resultMap>
 ```
 
-<collection>节点中的ofType指定查询结果的每条记录封装成的类型。
+*collection* 节点中的ofType指定查询结果的每条记录封装成的类型。
 
 在StudentMapper添加一个查询方法，并在StudentMapperImpl中实现该方法，在单元测试中测试。
 
