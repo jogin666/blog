@@ -1,4 +1,4 @@
-## Hibernate篇章（七）Hibernate面试问题写在
+## Hibernate篇章（七）Hibernate面试问题
 
 写在前面，原文来源：<a href="https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&mid=2247483906&idx=1&sn=16e43bebd697ad451e685038219ae2b9&chksm=ebd74303dca0ca1554311b16939713b4b23a9634ae614b302b8d748431aba6bc9aad83fadfbc&scene=21###wechat_redirect">Hibernate面试题大全</a>
 
