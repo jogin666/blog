@@ -2,7 +2,7 @@
 
 并发使用的多线程或线程池在本质上是由Thread类的实例进行操作的，要了解高并发则很有必要要了解Thread。
 
-若对线程不太了解的话，传送门：<a href="">多线程入门</a>
+若对线程不太了解的话，传送门：<a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%85%A5%E9%97%A8.md">多线程入门</a>
 
 ### 一、Thread类的特点
 
