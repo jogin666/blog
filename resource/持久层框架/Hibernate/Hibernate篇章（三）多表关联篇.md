@@ -1,6 +1,6 @@
 ## Hibernate篇章（三）多表关联篇
 
-上两个篇章《<a href="">Hibernate篇章（一）入门篇</a>》和《<a href="">Hibernate篇章（二）配置、映射文件介绍</a>》分别讲述hibernate
+上两个篇章《<a href="">Hibernate篇章（一）入门篇</a>》和《<a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Hibernate/Hibernate%E7%AF%87%E7%AB%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E9%85%8D%E7%BD%AE%E3%80%81%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E7%AF%87.md">Hibernate篇章（二）配置、映射文件介绍</a>》分别讲述hibernate
 
 的快速入门和hibernate的配置文件，映射文件，所以这个篇章将要讲述的是hibernate的是如何使用关联映射文
 
