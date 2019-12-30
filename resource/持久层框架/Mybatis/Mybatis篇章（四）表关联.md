@@ -2,7 +2,7 @@
 
 这是MyBatis篇章的第四篇了，本来这篇想讲的是Mybatis的缓存的。但是想了想还是讲一下Mybatis的多关联
 
-和表之间的映射吧！回顾上一篇章《<a href="https://github.com/jogin666/Database-Persistence-Framework/blob/master/mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%89%EF%BC%89%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6.md">Mybatis篇章（三）映射文件</a>》，在讲 *resultMap* 的时候，其实已经将
+和表之间的映射吧！回顾上一篇章《<a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%89%EF%BC%89%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6.md">Mybatis篇章（三）映射文件</a>》，在讲 *resultMap* 的时候，其实已经将
 
 Mybatis的多表关联给讲了，现在重新再理一遍吧。
 
