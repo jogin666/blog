@@ -14,7 +14,7 @@
 
 - Synchronized就是一种常见的悲观锁。CAS机制（比较交换）就是一种常见的乐观锁。
 
-- 如果对于Synchronized还不太了解的话，传送门:<a href="">Synchronized详解</a>
+- 如果对于Synchronized还不太了解的话，传送门:<a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E9%94%81/synchronized%E8%AF%A6%E8%A7%A3.md">Synchronized详解</a>
 
 
 
