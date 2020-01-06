@@ -8,89 +8,75 @@
 
 **1、泛型，枚举，注解，字符串**
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E4%B8%8E%E6%8B%86%E8%A3%85%E7%AE%B1.md">基本类型与拆装箱</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83.md">String、StringBuilder、StringBuffer的学习</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E6%9E%9A%E4%B8%BE.md">枚举 知识点回顾</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E6%B3%9B%E5%9E%8B.md">泛型 知识点回顾</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E6%B3%A8%E8%A7%A3.md">注解 知识点回顾</a>
-
-
+- [基本类型与拆装箱](https://github.com/jogin666/blog/blob/master/resource/java/基本类型与拆装箱.md)
+- [String、StringBuilder、StringBuffer的学习](https://github.com/jogin666/blog/blob/master/resource/java/字符串比较.md)
+- [枚举 知识点回顾](https://github.com/jogin666/blog/blob/master/resource/java/枚举.md)
+- [泛型 知识点回顾](https://github.com/jogin666/blog/blob/master/resource/java/泛型.md)
+- [注解 知识点回顾](https://github.com/jogin666/blog/blob/master/resource/java/注解.md)
 
 **2、反射**
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%8F%8D%E5%B0%84/Class.md">Class类 学习</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%8F%8D%E5%B0%84/Constructor.md">构造函数类（Constructor） 学习</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%8F%8D%E5%B0%84/Method.md">方法类（Method） 学习</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%8F%8D%E5%B0%84/Field.md">成员类（Field）学习</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%8F%8D%E5%B0%84/%E5%8F%8D%E5%B0%84.md">Java反射demo</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%8F%8D%E5%B0%84/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8.md">类加载器 学习</a>
-
-
+- [Class类 学习](https://github.com/jogin666/blog/blob/master/resource/java/反射/Class.md)
+- [构造函数类（Constructor） 学习](https://github.com/jogin666/blog/blob/master/resource/java/反射/Constructor.md)
+- [方法类（Method） 学习](https://github.com/jogin666/blog/blob/master/resource/java/反射/Method.md)
+- [成员类（Field）学习](https://github.com/jogin666/blog/blob/master/resource/java/反射/Field.md)
+- [Java反射demo](https://github.com/jogin666/blog/blob/master/resource/java/反射/反射.md)
+- [类加载器 学习](https://github.com/jogin666/blog/blob/master/resource/java/反射/类加载器.md)
 
 **3、时间API**
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E6%97%B6%E9%97%B4API/Java%E6%97%B6%E9%97%B4%E7%B1%BB%20%E7%AE%80%E5%8D%95%E5%AD%A6%E4%B9%A0.md">Jdk8的时间类</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E6%97%B6%E9%97%B4API/SimpleDateFormat%E7%BA%BF%E7%A8%8B%E4%B8%8D%E5%AE%89%E5%85%A8.md">SimpleDateFormat线程不安全</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E6%97%B6%E9%97%B4API/Java%E6%97%B6%E9%97%B4%E4%BB%BB%E5%8A%A1%E5%92%8C%E8%AE%A1%E6%97%B6.md">Java时间任务和新计时姿势</a>
+- [Jdk8的时间类](https://github.com/jogin666/blog/blob/master/resource/java/时间API/Java时间类 简单学习.md)
+- [SimpleDateFormat线程不安全](https://github.com/jogin666/blog/blob/master/resource/java/时间API/SimpleDateFormat线程不安全.md)
+- [Java时间任务和新计时姿势](https://github.com/jogin666/blog/blob/master/resource/java/时间API/Java时间任务和计时.md)
 
+**4、容器**
 
+- 集合
+  - [Collection 接口 介绍](https://github.com/jogin666/blog/blob/master/resource/java/集合/Collection.md)
+  - [ArrayList 深入源码学习](https://github.com/jogin666/blog/blob/master/resource/java/集合/ArrayList.md)
+  - [LinkedList 深入源码学习](https://github.com/jogin666/blog/blob/master/resource/java/集合/LinkedList.md)
+  - [PriorityQueue 深入源码学习](https://github.com/jogin666/blog/blob/master/resource/java/集合/PriorityQueue.md)
+  - [快速失败机制分析](https://github.com/jogin666/blog/blob/master/resource/java/集合/fast-fail.md)
+  - [CopyOnWrriteArrayList/Set 深入源码学习](https://github.com/jogin666/blog/blob/master/resource/java/集合/CopyOnWriteArrayList(Set).md)
 
-**4、集合**
+- map 和 set
+  - [Map 接口介绍](https://github.com/jogin666/blog/blob/master/resource/java/map and set/Map.md)
+  - [深入源码学习 HashMap](https://github.com/jogin666/blog/blob/master/resource/java/map and set/HashMap.md)
+  - [深入源码学习 LinkedHashMap](https://github.com/jogin666/blog/blob/master/resource/java/map and set/LinkedHashMap.md)
+  - [深入源码学习 TreeMap](https://github.com/jogin666/blog/blob/master/resource/java/map and set/TreeMap.md)
+  - [Set 介绍](https://github.com/jogin666/blog/blob/master/resource/java/map and set/Set.md)
+  - [深入源码学习 ConcurrentHashMap](https://github.com/jogin666/blog/blob/master/resource/java/map and set/ConcurrentHashMap.md)
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E9%9B%86%E5%90%88/Collection.md">Collection 接口 介绍</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E9%9B%86%E5%90%88/ArrayList.md">ArrayList 深入源码学习</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E9%9B%86%E5%90%88/LinkedList.md">LinkedList 深入源码学习</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E9%9B%86%E5%90%88/PriorityQueue.md">PriorityQueue 深入源码学习</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E9%9B%86%E5%90%88/fast-fail.md">快速失败机制分析</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E9%9B%86%E5%90%88/CopyOnWriteArrayList(Set).md">CopyOnWrriteArrayList/Set 深入源码学习</a>
+**5、java IO**
 
+- [传统IO学习](https://github.com/jogin666/blog/blob/master/resource/java/IO/传统IO系统学习.md)
+- [NIO学习篇（一）文件操作](https://github.com/jogin666/blog/blob/master/resource/java/IO/NIO学习篇（一）文件操作.md)
+- [NIO学习篇（二）网络通信（1）](https://github.com/jogin666/blog/blob/master/resource/java/IO/NIO学习篇（二）网络通信(1).md)
+- [NIO学习篇（三）NIO 和 Epoll 的关联](https://github.com/jogin666/blog/blob/master/resource/java/IO/NIO学习篇（四）NIO%26epoll讲解.md)
+- [NIO学习篇（四）网络通信（2）](https://github.com/jogin666/blog/blob/master/resource/java/IO/NIO学习篇（三）网络通信(2).md)
 
+**6、jdk8 的新特性**
 
-**5、map and set**
+- [Lambda表达式 和 函数式](https://github.com/jogin666/blog/blob/master/resource/java/jdk8的新特性/Lambda和函数式.md)
+- [数据集合流 Stream](https://github.com/jogin666/blog/blob/master/resource/java/jdk8的新特性/Stream.md)
+- [Optional类 深入源码学习](https://github.com/jogin666/blog/blob/master/resource/java/jdk8的新特性/Optional.md)
+- [接口的新特性](https://github.com/jogin666/blog/blob/master/resource/java/jdk8的新特性/接口的变化.md)
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/Map.md">Map 接口介绍</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/HashMap.md">深入源码学习 HashMap</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/LinkedHashMap.md">深入源码学习 LinkedHashMap</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/TreeMap.md">深入源码学习 TreeMap</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/Set.md">Set 介绍</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/ConcurrentHashMap.md">深入源码学习 ConcurrentHashMap</a>
-
-
-
-**6、java IO**
-
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/IO/%E4%BC%A0%E7%BB%9FIO%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0.md">传统IO学习</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/IO/NIO%E5%AD%A6%E4%B9%A0%E7%AF%87%EF%BC%88%E4%B8%80%EF%BC%89%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C.md">NIO学习篇（一）文件操作</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/IO/NIO%E5%AD%A6%E4%B9%A0%E7%AF%87%EF%BC%88%E4%BA%8C%EF%BC%89%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1(1).md">NIO学习篇（二）网络通信（1）</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/IO/NIO%E5%AD%A6%E4%B9%A0%E7%AF%87%EF%BC%88%E5%9B%9B%EF%BC%89NIO%26epoll%E8%AE%B2%E8%A7%A3.md">NIO学习篇（三）NIO 和 Epoll 的关联</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/IO/NIO%E5%AD%A6%E4%B9%A0%E7%AF%87%EF%BC%88%E4%B8%89%EF%BC%89%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1(2).md">NIO学习篇（四）网络通信（2）</a>
-
-
-
-**7、jdk8 的新特性**
-
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/jdk8%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7/Lambda%E5%92%8C%E5%87%BD%E6%95%B0%E5%BC%8F.md">Lambda表达式 和 函数式</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/jdk8%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7/Stream.md">数据集合流 Stream </a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/jdk8%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7/Optional.md">Optional类 深入源码学习</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/jdk8%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7/%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%8F%98%E5%8C%96.md">接口的新特性</a>
-
-
-
-**8、高并发**
+**7、高并发**
 
 - 线程
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%85%A5%E9%97%A8.md">多线程入门</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E5%A4%9A%E7%BA%BF%E7%A8%8B/Thread%E6%B7%B1%E5%85%A5%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0.md">深入源码学习 Thread</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E5%A4%9A%E7%BA%BF%E7%A8%8B/LocalThread%E5%AD%A6%E4%B9%A0.md">深入源码学习 ThreadLocal</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E6%B1%A0.md">线程池介绍</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB.md">多线程的辅助工具类</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%8E%9F%E5%AD%90%E5%8F%98%E9%87%8F%E7%B1%BB(Atomic)%E5%AD%A6%E4%B9%A0.md">原子变量类介绍</a>
+  - [多线程入门](https://github.com/jogin666/blog/blob/master/resource/java/并发/多线程/多线程入门.md)
+  - [深入源码学习 Thread](https://github.com/jogin666/blog/blob/master/resource/java/并发/多线程/Thread深入源码学习.md)
+  - [深入源码学习 ThreadLocal](https://github.com/jogin666/blog/blob/master/resource/java/并发/多线程/LocalThread学习.md)
+  - [线程池介绍](https://github.com/jogin666/blog/blob/master/resource/java/并发/多线程/线程池.md)
+  - [多线程的辅助工具类](https://github.com/jogin666/blog/blob/master/resource/java/并发/多线程/多线程的辅助工具类.md)
+  - [原子变量类介绍](https://github.com/jogin666/blog/blob/master/resource/java/并发/多线程/原子变量类(Atomic)学习.md)
 - 锁
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E9%94%81/synchronized%E8%AF%A6%E8%A7%A3.md">synchronized 详解</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E9%94%81/AbstractQueuedSynchronizer%E8%AF%A6%E8%A7%A3.md">学习同步器 AQS</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E9%94%81/AQS%E5%AD%90%E9%94%81%E4%BB%8B%E7%BB%8D.md">AQS 子类介绍</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E9%94%81/CLH%E9%94%81%E5%92%8CMCS%E9%94%81.md">CLH锁和MCS锁介绍</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/%E5%B9%B6%E5%8F%91/%E9%94%81/%E6%AD%BB%E9%94%81%E4%BB%8B%E7%BB%8D.md">死锁介绍</a>
+  - [synchronized 详解](https://github.com/jogin666/blog/blob/master/resource/java/并发/锁/synchronized详解.md)
+  - [学习同步器 AQS](https://github.com/jogin666/blog/blob/master/resource/java/并发/锁/AbstractQueuedSynchronizer详解.md)
+  - [AQS 子类介绍](https://github.com/jogin666/blog/blob/master/resource/java/并发/锁/AQS子锁介绍.md)
+  - [CLH锁和MCS锁介绍](https://github.com/jogin666/blog/blob/master/resource/java/并发/锁/CLH锁和MCS锁.md)
+  - [死锁介绍](https://github.com/jogin666/blog/blob/master/resource/java/并发/锁/死锁介绍.md)
 
 
 
@@ -98,36 +84,32 @@
 
 **1、用Java实现数据结构**
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8.md">链表</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%88.md">栈</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%98%9F%E5%88%97.md">队列</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91.md">二叉搜索树 </a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E8%87%AA%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91.md">自平衡二叉树</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91.md">哈夫曼树</a>
-
-
+- [链表](https://github.com/jogin666/blog/blob/master/resource/数据结构/链表.md)
+- [栈](https://github.com/jogin666/blog/blob/master/resource/数据结构/栈.md)
+- [队列](https://github.com/jogin666/blog/blob/master/resource/数据结构/队列.md)
+- [二叉搜索树](https://github.com/jogin666/blog/blob/master/resource/数据结构/二叉排序树.md)
+- [自平衡二叉树](https://github.com/jogin666/blog/blob/master/resource/数据结构/自平衡二叉树.md)
+- [哈夫曼树](https://github.com/jogin666/blog/blob/master/resource/数据结构/哈夫曼树.md)
 
 **2、8种常见排序算法**
 
-- <a href="https://github.com/jogin666/Solution/blob/master/8%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/select%E5%92%8Cswap.md">选择排序和交换排序</a>
-- <a href="https://github.com/jogin666/Solution/blob/master/8%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/bubble%E5%92%8Cshell.md">冒泡排序和希尔排序</a>
-- <a href="https://github.com/jogin666/Solution/blob/master/8%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/heap%E5%92%8Cbase.md">堆排序和基数排序（桶排序）</a>
-- <a href="https://github.com/jogin666/Solution/blob/master/8%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/insert.md">插入排序</a>
-- <a href="https://github.com/jogin666/Solution/blob/master/8%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/quick.md">快速排序</a>
-
-
+- [选择排序和交换排序](https://github.com/jogin666/Solution/blob/master/8种排序算法/select和swap.md)
+- [冒泡排序和希尔排序](https://github.com/jogin666/Solution/blob/master/8种排序算法/bubble和shell.md)
+- [堆排序和基数排序（桶排序）](https://github.com/jogin666/Solution/blob/master/8种排序算法/heap和base.md)
+- [插入排序](https://github.com/jogin666/Solution/blob/master/8种排序算法/insert.md)
+- [快速排序](https://github.com/jogin666/Solution/blob/master/8种排序算法/quick.md)
 
 **3、剑指Offer 和 动态规划**
 
-- <a href="https://github.com/jogin666/Solution">剑指Offer</a>
-- <a href="https://github.com/jogin666/Solution/blob/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87.md">动态规划篇章（一）入门篇</a>
+- [剑指Offer](https://github.com/jogin666/Solution)
+- [动态规划篇章（一）入门篇](https://github.com/jogin666/Solution/blob/master/动态规划/动态规划篇章（一）入门篇.md)
 
 
 
 ### 三、数据库知识
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%9A%84%E8%BF%9E%E6%8E%A5.md">数据库表的连接</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%B8%89%E7%A7%8D%E5%88%A0%E9%99%A4%E6%96%B9%E5%BC%8F.md">数据库的三种删除</a>
+- [数据库表的连接](https://github.com/jogin666/blog/blob/master/resource/数据库知识/数据库表的连接.md)
+- [数据库的三种删除](https://github.com/jogin666/blog/blob/master/resource/数据库知识/数据库的三种删除方式.md)
 
 
 
@@ -135,33 +117,29 @@
 
 **1、Hibernate**
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Hibernate/Hibernate%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87.md">Hibernate篇章（一）入门篇</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Hibernate/Hibernate%E7%AF%87%E7%AB%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E9%85%8D%E7%BD%AE%E3%80%81%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E7%AF%87.md">Hibernate篇章（二） 配置文件和映射文件介绍</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Hibernate/Hibernate%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%89%EF%BC%89%E5%A4%9A%E8%A1%A8%E5%85%B3%E8%81%94%E7%AF%87.md">Hibernate篇章（三）多表关联篇</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Hibernate/Hibernate%E7%AF%87%E7%AB%A0%EF%BC%88%E5%9B%9B%EF%BC%89%E6%B3%A8%E8%A7%A3%E7%AF%87.md">Hibernate篇章（四）注解篇</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Hibernate/Hibernate%E7%AF%87%E7%AB%A0%EF%BC%88%E4%BA%94%EF%BC%89%E7%BC%93%E5%AD%98%E7%AF%87.md">Hibernate篇章（五）缓存篇</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Hibernate/Hibernate%E7%AF%87%E7%AB%A0%EF%BC%88%E5%85%AD%EF%BC%89Spring%E6%95%B4%E5%90%88%E7%AF%87%E7%AB%A0.md">Hibernate篇章（六）Spring整合篇章</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Hibernate/Hibernate%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%83%EF%BC%89%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98.md">Hibernate篇章（七）Hibernate面试问题</a>
-
-
+- [Hibernate篇章（一）入门篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Hibernate/Hibernate篇章（一）入门篇.md)
+- [Hibernate篇章（二） 配置文件和映射文件介绍](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Hibernate/Hibernate篇章（二）配置、映射文件篇.md)
+- [Hibernate篇章（三）多表关联篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Hibernate/Hibernate篇章（三）多表关联篇.md)
+- [Hibernate篇章（四）注解篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Hibernate/Hibernate篇章（四）注解篇.md)
+- [Hibernate篇章（五）缓存篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Hibernate/Hibernate篇章（五）缓存篇.md)
+- [Hibernate篇章（六）Spring整合篇章](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Hibernate/Hibernate篇章（六）Spring整合篇章.md)
+- [Hibernate篇章（七）Hibernate面试问题](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Hibernate/Hibernate篇章（七）面试问题.md)
 
 **2、Mybatis**
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87.md">Mybatis篇章（一）入门篇</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8A%A8%E6%80%81sql%E4%B8%8E%E6%B3%A8%E8%A7%A3.md">Mybatis篇章（二）动态sql语句与注解</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%89%EF%BC%89%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6.md">Mybatis篇章（三）映射文件</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E5%9B%9B%EF%BC%89%E8%A1%A8%E5%85%B3%E8%81%94.md">Mybatis篇章（四）表关联</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E4%BA%94%EF%BC%89%E7%BC%93%E5%AD%98%E7%AF%87.md">Mybatis篇章（五）缓存篇</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E5%85%AD%EF%BC%89spring%E6%95%B4%E5%90%88.md">Mybatis篇章（六）Spring整合</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/Mybatis/Mybatis%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%83%EF%BC%89%E9%9D%A2%E8%AF%95%E9%A2%98.md">Mybatis篇章（七） 常见面试题</a>
-
-
+- [Mybatis篇章（一）入门篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（一）入门篇.md)
+- [Mybatis篇章（二）动态sql语句与注解](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（二）动态sql与注解.md)
+- [Mybatis篇章（三）映射文件](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（三）映射文件.md)
+- [Mybatis篇章（四）表关联](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（四）表关联.md)
+- [Mybatis篇章（五）缓存篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（五）缓存篇.md)
+- [Mybatis篇章（六）Spring整合](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（六）spring整合.md)
+- [Mybatis篇章（七） 常见面试题](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（七）面试题.md)
 
 **3、SpringData Jpa**
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/SpringData%20JPA/SpringData%20JPA%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87%EF%BC%881%EF%BC%89.md">SpringData JPA篇章（一）入门篇（1）</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/SpringData%20JPA/SpringData%20JPA%E7%AF%87%E7%AB%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87%EF%BC%882%EF%BC%89.md">SpringData JPA篇章（二）入门篇（2）</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/SpringData%20JPA/SpringData%20JPA%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%89%EF%BC%89Repository%E7%AF%87.md">SpringData JPA篇章（三）Repository篇</a>
+- [SpringData JPA篇章（一）入门篇（1）](https://github.com/jogin666/blog/blob/master/resource/持久层框架/SpringData JPA/SpringData JPA篇章（一）入门篇（1）.md)
+- [SpringData JPA篇章（二）入门篇（2）](https://github.com/jogin666/blog/blob/master/resource/持久层框架/SpringData JPA/SpringData JPA篇章（二）入门篇（2）.md)
+- [SpringData JPA篇章（三）Repository篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/SpringData JPA/SpringData JPA篇章（三）Repository篇.md)
 
 
 
@@ -169,25 +147,40 @@
 
 **1、Spring**
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3Spring%E7%9A%84%E4%BA%8B%E5%8A%A1.md">深入了解Spring事务</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/SpringData%20JPA/SpringData%20JPA%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87%EF%BC%881%EF%BC%89.md">SpringData JPA篇章（一）入门篇（1）</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/SpringData%20JPA/SpringData%20JPA%E7%AF%87%E7%AB%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87%EF%BC%882%EF%BC%89.md">SpringData JPA篇章（二）入门篇（2）</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/SpringData%20JPA/SpringData%20JPA%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%89%EF%BC%89Repository%E7%AF%87.md">SpringData JPA篇章（三）Repository篇</a>
+- [深入了解Spring事务](https://github.com/jogin666/blog/blob/master/resource/spring family/spring/深入了解Spring的事务.md)
+- [SpringData JPA篇章（一）入门篇（1）](https://github.com/jogin666/blog/blob/master/resource/持久层框架/SpringData JPA/SpringData JPA篇章（一）入门篇（1）.md)
+- [SpringData JPA篇章（二）入门篇（2）](https://github.com/jogin666/blog/blob/master/resource/持久层框架/SpringData JPA/SpringData JPA篇章（二）入门篇（2）.md)
+- [SpringData JPA篇章（三）Repository篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/SpringData JPA/SpringData JPA篇章（三）Repository篇.md)
 
 **2、Spring Cloud**
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring%20cloud/Spring%20Cloud%20%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E7%9F%A5%E8%AF%86%E6%A6%82%E5%BF%B5%E7%AF%87.md">Spring Cloud篇章（一）知识概念篇</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring%20cloud/Spring%20Cloud%20%E7%AF%87%E7%AB%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E7%AF%87.md">Spring Cloud篇章（二） 快速入门篇</a>
-- <a href="https://github.com/jogin666/microservicecloud">Spring Cloud篇章（三）简易项目篇</a>
+- [Spring Cloud篇章（一）知识概念篇](https://github.com/jogin666/blog/blob/master/resource/spring family/spring cloud/Spring Cloud 篇章（一）知识概念篇.md)
+- [Spring Cloud篇章（二） 快速入门篇](https://github.com/jogin666/blog/blob/master/resource/spring family/spring cloud/Spring Cloud 篇章（二）快速入门篇.md)
+- [Spring Cloud篇章（三）简易项目篇](https://github.com/jogin666/microservicecloud)
 
 
 
 ### 六、分布式与服务化
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E5%88%86%E5%B8%83%E5%BC%8F%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%8C%96%E6%A6%82%E5%BF%B5/%E5%88%86%E5%B8%83%E5%BC%8F%EF%BC%8C%E9%9B%86%E7%BE%A4%E3%80%81%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D.md">分布式，集群、微服务概念介绍</a>
+- [分布式，集群、微服务概念介绍](https://github.com/jogin666/blog/blob/master/resource/分布式和服务化概念/分布式，集群、微服务概念介绍.md)
+- [浅谈SOA架构](https://github.com/jogin666/blog/blob/master/resource/分布式和服务化概念/浅谈SOA架构.md)
+- [分布式的CAP理论](https://github.com/jogin666/blog/blob/master/resource/分布式和服务化概念/CAP理论.md)
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E5%88%86%E5%B8%83%E5%BC%8F%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%8C%96%E6%A6%82%E5%BF%B5/%E6%B5%85%E8%B0%88SOA%E6%9E%B6%E6%9E%84.md">浅谈SOA架构</a>
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/%E5%88%86%E5%B8%83%E5%BC%8F%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%8C%96%E6%A6%82%E5%BF%B5/CAP%E7%90%86%E8%AE%BA.md">分布式的CAP理论</a>
 
-  
+### 七、协议
+
+- HTTP 协议 和 HTTPS 协议
+
+  - <a href="https://github.com/jogin666/blog/blob/master/resource/%E5%8D%8F%E8%AE%AE/HTTP%20%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3.md">Http协议详解</a>
+
+  - <a href="https://github.com/jogin666/blog/blob/master/resource/%E5%8D%8F%E8%AE%AE/%E5%AD%A6%E4%B9%A0%20HTTP2%20%E5%92%8C%20HTTPS.md">学习 HTTP2和HTTPS</a>
+
+  - <a href="https://github.com/jogin666/blog/blob/master/resource/%E5%8D%8F%E8%AE%AE/HTTP%20%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98.md">HTTP 常见面试题</a>
+
+    
+
+- UDP 协议 和 TCP协议
+
+  - <a href="https://github.com/jogin666/blog/blob/master/resource/%E5%8D%8F%E8%AE%AE/UDP%20%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3.md">UDP 协议详解</a>
+  - <a href="https://github.com/jogin666/blog/blob/master/resource/%E5%8D%8F%E8%AE%AE/TCP%20%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3.md">TCP协议回顾</a>
