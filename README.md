@@ -25,7 +25,7 @@
 
 **3、时间API**
 
-- [Jdk8的时间类](https://github.com/jogin666/blog/blob/master/resource/java/时间API/Java时间类 简单学习.md)
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/时间API/Java时间类 简单学习.md">Jdk8的时间类</a>
 - [SimpleDateFormat线程不安全](https://github.com/jogin666/blog/blob/master/resource/java/时间API/SimpleDateFormat线程不安全.md)
 - [Java时间任务和新计时姿势](https://github.com/jogin666/blog/blob/master/resource/java/时间API/Java时间任务和计时.md)
 
@@ -40,12 +40,12 @@
   - [CopyOnWrriteArrayList/Set 深入源码学习](https://github.com/jogin666/blog/blob/master/resource/java/集合/CopyOnWriteArrayList(Set).md)
 
 - map 和 set
-  - [Map 接口介绍](https://github.com/jogin666/blog/blob/master/resource/java/map and set/Map.md)
-  - [深入源码学习 HashMap](https://github.com/jogin666/blog/blob/master/resource/java/map and set/HashMap.md)
-  - [深入源码学习 LinkedHashMap](https://github.com/jogin666/blog/blob/master/resource/java/map and set/LinkedHashMap.md)
-  - [深入源码学习 TreeMap](https://github.com/jogin666/blog/blob/master/resource/java/map and set/TreeMap.md)
-  - [Set 介绍](https://github.com/jogin666/blog/blob/master/resource/java/map and set/Set.md)
-  - [深入源码学习 ConcurrentHashMap](https://github.com/jogin666/blog/blob/master/resource/java/map and set/ConcurrentHashMap.md)
+  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/Map.md">Map深入源码学习</a>
+  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/map and set/HashMap.md">深入源码学习 HashMap</a>
+  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/LinkedHashMap.md">深入源码学习 LinkedHashMap</a>
+  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/TreeMap.md">深入源码学习 TreeMap</a>
+  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/Set.md">Set 介绍</a>
+  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/ConcurrentHashMap.md">ConcurrentHashMap深入源码学习</a> 
 
 **5、java IO**
 
@@ -135,11 +135,11 @@
 - [Mybatis篇章（六）Spring整合](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（六）spring整合.md)
 - [Mybatis篇章（七） 常见面试题](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（七）面试题.md)
 
-**3、SpringData Jpa**
+**3、SpringData JPA**
 
-- [SpringData JPA篇章（一）入门篇（1）](https://github.com/jogin666/blog/blob/master/resource/持久层框架/SpringData JPA/SpringData JPA篇章（一）入门篇（1）.md)
-- [SpringData JPA篇章（二）入门篇（2）](https://github.com/jogin666/blog/blob/master/resource/持久层框架/SpringData JPA/SpringData JPA篇章（二）入门篇（2）.md)
-- [SpringData JPA篇章（三）Repository篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/SpringData JPA/SpringData JPA篇章（三）Repository篇.md)
+- <a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring/SpringData%20JPA%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87%EF%BC%881%EF%BC%89.md">SpringData JPA篇章（一）入门篇（1）</a>
+- <a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring/SpringData%20JPA%E7%AF%87%E7%AB%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87%EF%BC%882%EF%BC%89.md">SpringData JPA篇章（二）入门篇（2）</a>
+- <a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring/SpringData%20JPA%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%89%EF%BC%89Repository%E7%AF%87.md">SpringData JPA篇章（三）Repository篇</a>
 
 
 
@@ -147,16 +147,16 @@
 
 **1、Spring**
 
-- [深入了解Spring事务](https://github.com/jogin666/blog/blob/master/resource/spring family/spring/深入了解Spring的事务.md)
-- [SpringData JPA篇章（一）入门篇（1）](https://github.com/jogin666/blog/blob/master/resource/持久层框架/SpringData JPA/SpringData JPA篇章（一）入门篇（1）.md)
-- [SpringData JPA篇章（二）入门篇（2）](https://github.com/jogin666/blog/blob/master/resource/持久层框架/SpringData JPA/SpringData JPA篇章（二）入门篇（2）.md)
-- [SpringData JPA篇章（三）Repository篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/SpringData JPA/SpringData JPA篇章（三）Repository篇.md)
+- <a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3Spring%E7%9A%84%E4%BA%8B%E5%8A%A1.md">深入了解Spring事务</a>
+- <a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring/SpringData%20JPA%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87%EF%BC%881%EF%BC%89.md">SpringData JPA篇章（一）入门篇（1）</a>
+- <a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring/SpringData%20JPA%E7%AF%87%E7%AB%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E5%85%A5%E9%97%A8%E7%AF%87%EF%BC%882%EF%BC%89.md">SpringData JPA篇章（二）入门篇（2）</a>
+- <a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring/SpringData%20JPA%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%89%EF%BC%89Repository%E7%AF%87.md">SpringData JPA篇章（三）Repository篇</a>
 
 **2、Spring Cloud**
 
-- [Spring Cloud篇章（一）知识概念篇](https://github.com/jogin666/blog/blob/master/resource/spring family/spring cloud/Spring Cloud 篇章（一）知识概念篇.md)
-- [Spring Cloud篇章（二） 快速入门篇](https://github.com/jogin666/blog/blob/master/resource/spring family/spring cloud/Spring Cloud 篇章（二）快速入门篇.md)
-- [Spring Cloud篇章（三）简易项目篇](https://github.com/jogin666/microservicecloud)
+- <a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring%20cloud/Spring%20Cloud%20%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E7%9F%A5%E8%AF%86%E6%A6%82%E5%BF%B5%E7%AF%87.md">Spring Cloud篇章（一）知识概念篇</a>
+- <a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring%20cloud/Spring%20Cloud%20%E7%AF%87%E7%AB%A0%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E7%AF%87.md">Spring Cloud 篇章（二） 快速入门篇</a>
+- <a href="https://github.com/jogin666/microservicecloud">Spring Cloud篇章（三）简易项目篇</a>
 
 
 
