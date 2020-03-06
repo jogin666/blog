@@ -13,9 +13,7 @@
 在面向切面编程的思想里面，会将业务分为核心业务，和周边业务。
 
 - 核心业务：系统中主要处理的业务，比如：登录、数据库的增删改等
-
 - 周边业务：系统的主要处理的业务的附加业务，比如：登录日志，数据库的事务等等（重复用到的业务）周边功能在 Spring 的面向切面编程AOP思想里，被定义为切面。
-
 
 > 在面向切面编程 AOP 的思想里面，核心业务功能和切面功能分别独立进行开发，然后把切面功能和核心业务功能 "编织" 在一起。其实AOP的本质就是动态代理，在执行的主要业务的方法之前，或者之后，或者前后执行周边业务。
 
@@ -76,7 +74,7 @@ AOP 将与业务无关，却为业务模块所提供服务的代码（例如事�
 | `aop:after-returning` | 定义返回通知                     | ——                           |
 | `aop:after-throwing`  | 定义异常通知                     | ——                           |
 
-* 创建 *CommitHelper* 类完成事务多的开启和关闭
+- 创建 *CommitHelper* 类完成事务多的开启和关闭
 
 ```java
 /*周边功能
@@ -96,7 +94,7 @@ public class CommitHelper {
 
 ```
 
-* 创建 *PersonDaoImpl*  完成事务的提交
+- 创建 *PersonDaoImpl*  完成事务的提交
 
 ```java
 /*核心功能
@@ -110,7 +108,7 @@ public class PersonDaoImpl {
 }
 ```
 
-* 创建 *PersonServiceImpl* 类 完成业务的处理
+- 创建 *PersonServiceImpl* 类 完成业务的处理
 
 ```java
 public class PersonServiceImpl {
@@ -132,7 +130,7 @@ public class PersonServiceImpl {
 }
 ```
 
-* 在配置文件中配置
+- 在配置文件中配置
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -164,7 +162,7 @@ public class PersonServiceImpl {
 </beans>
 ```
 
-* 单元测试
+- 单元测试
 
 ```java
 public class PersonServiceImplTest {
@@ -206,7 +204,7 @@ public class PersonServiceImplTest {
 | `@AfterReturning` | 返回通知，在连接点方法执行并正常返回后调用，要求连接点方法在执行过程中没有发生异常 |
 | `@AfterThrowing`  | 异常通知，当连接点方法异常时调用                             |
 
-* 在 *CommitHelper* 类中使用注解，定义一个切面类，注意切面类仍是一个 bean ，所以仍然是需要使用 @Component 注解的
+- 在 *CommitHelper* 类中使用注解，定义一个切面类，注意切面类仍是一个 bean ，所以仍然是需要使用 @Component 注解的
 
 ```java
 /*周边功能
@@ -229,7 +227,7 @@ public class CommitHelper {
 }
 ```
 
-* 如果觉得每次写 *@Before、@After* 等，都要重复编写切入点表达式，觉得很烦，代码不够优雅，可以使用  	*@pointCut* 注解解决这个问题。
+- 如果觉得每次写 *@Before、@After* 等，都要重复编写切入点表达式，觉得很烦，代码不够优雅，可以使用  	*@pointCut* 注解解决这个问题。
 
 ```java
 @Component
@@ -256,7 +254,7 @@ public class CommitHelper {
 }
 ```
 
-* 处理核心业务的 *PersonServiceImpl* 和 *PersonDaoImpl* 类如下
+- 处理核心业务的 *PersonServiceImpl* 和 *PersonDaoImpl* 类如下
 
 ```java
 /* 业务处理 */
@@ -283,7 +281,7 @@ public class PersonDaoImpl {
 }
 ```
 
-* 在配置文件中，配置要扫描的包和启动 aop 代理模式
+- 在配置文件中，配置要扫描的包和启动 aop 代理模式
 
 ```xml
 <!--开启aop代理-->
@@ -293,7 +291,7 @@ public class PersonDaoImpl {
 <context:component-scan base-package="net.aspect"/>
 ```
 
-* 单元测试
+- 单元测试
 
 ```java
 public class PersonServiceImplTest {
@@ -321,55 +319,55 @@ public class PersonServiceImplTest {
 
 **切点表达式介绍**
 
-* 语法
+- 语法
 
 ```java
 execution(modifiers-pattern? ret-type-pattern declaring-type-pattern? name-pattern(param-pattern) throws-pattern?)
 ```
 
-* 符号讲解
+- 符号讲解
 
-  * “ ？” 号代表 0 或 1，可以不写
-  * “ * ” 号代表任意类型，0 或 多
-  * “ .. ” 号代表可变参数
+  - “ ？” 号代表 0 或 1，可以不写
+  - “ * ” 号代表任意类型，0 或 多
+  - “ .. ” 号代表可变参数
 
-* 参数讲解
+- 参数讲解
 
-  * modifiers-pattern ：修饰符，可以不写
-  * ret-type-pattern ： 方法返回类型，必须要写
-  * declaring-type-pattern ： 方法的声明类型，方法声明的类型，可以不写
-  * name-pattern(param-pattern) ： 要匹配的名称（方法名），括号里面是方法的参数
-  * throws-pattern ：方法抛出的异常，可以不写
+  - modifiers-pattern ：修饰符，可以不写
+  - ret-type-pattern ： 方法返回类型，必须要写
+  - declaring-type-pattern ： 方法的声明类型，方法声明的类型，可以不写
+  - name-pattern(param-pattern) ： 要匹配的名称（方法名），括号里面是方法的参数
+  - throws-pattern ：方法抛出的异常，可以不写
 
   
 
-* 例子演示
+- 例子演示
 
-  * 指定了修饰符，任意返回类型的任意方法
+  - 指定了修饰符，任意返回类型的任意方法
 
   ```java
   execution(public * *(..))
   ```
 
-  * 不指定修饰符，指定了任意返回类型的任意 set 方法
+  - 不指定修饰符，指定了任意返回类型的任意 set 方法
 
   ```java
   execution(* set(..))
   ```
 
-  * 不指定修饰符，指定了任意返回类型的具体类的任意方法
+  - 不指定修饰符，指定了任意返回类型的具体类的任意方法
 
   ```java
   execution(* com.zy.service.PersionService.*(..))
   ```
 
-  * 指定具体包下任意类的任意方法
+  - 指定具体包下任意类的任意方法
 
   ```java
   execution(* com.zy.service.*.*(..))
   ```
 
-  * 指定具体包和其子包下的任意类的任意方法
+  - 指定具体包和其子包下的任意类的任意方法
 
   ```
   execution(* com.zy.service..*.*(..))
