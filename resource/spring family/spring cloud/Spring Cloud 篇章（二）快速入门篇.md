@@ -2,7 +2,7 @@
 
 在上一篇章中，讲述了 Spring Cloud 的概念和相关组件，此篇章将讲述 Spring Cloud 的入门。此篇章内容是在上
 
-一篇章的基础上讲述的，详情请看 《<a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring%20cloud/Spring%20Cloud%20%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E7%9F%A5%E8%AF%86%E6%A6%82%E5%BF%B5%E7%AF%87.md">Spring Cloud 篇章（一）知识概念篇</a>》
+一篇章的基础上讲述的，详情请看 《<a href="https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring%20cloud/Spring%20Cloud%20%E7%AF%87%E7%AB%A0%EF%BC%88%E4%B8%80%EF%BC%89%E7%9F%A5%E8%AF%86%E6%A6%82%E5%BF%B5%E7%AF%87.md">Spring Cloud 篇章（一）知识概念篇</a>》
 
 
 
@@ -17,52 +17,55 @@
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.3.RELEASE</version>
+        <version>2.2.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
-    <groupId>com.demo</groupId>
-    <artifactId>server_eureka</artifactId>
+    <groupId>com.zy</groupId>
+    <artifactId>eureka_server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>server_eureka</name>
-    <description>Demo project for Spring Boot</description>
+    <name>eureka_server</name>
+    <description>third spsm eureka server</description>
 
     <properties>
         <java.version>1.8</java.version>
-        <!--spring cloud 版本-->
-        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+        <!--spring cloud 版本号-->
+        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
     </properties>
 
     <dependencies>
-        <!--web 启动器-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        
-        <!--eureka -->
+        <!--eureka 注册中心启动器-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
-        
-        <!--测试启动器-->
+		<!--热加载工具-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <!--测试依赖启动器-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
-    <!--版本依赖配置-->
     <dependencyManagement>
+        <!--spring cloud 依赖-->
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -74,7 +77,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <!--插件-->
     <build>
         <plugins>
             <plugin>
@@ -83,16 +85,6 @@
             </plugin>
         </plugins>
     </build>
-
-    <!--仓库-->
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-        </repository>
-    </repositories>
-
 </project>
 ```
 
@@ -138,7 +130,22 @@ public class EurekaApplication {
 
 **3、配置服务（user-service、order-service）**
 
-如上述创建 eureka 步骤意向一样，创建 user-service 服务，然后配置 user-service的信息，注册到 eureka 中心
+如上述创建 eureka 步骤一样，只不过选的是 *Eureka Discovery Client*，创建 user-service 服务，然后
+
+配置 user-service的信息，注册到 eureka 中心，*pom.xml* 文件如下：
+
+```xml
+<!--web 启动器-->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+<!--eureka client 启动器-->
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+```
 
 配置文件 *application.yml* 文件如下：
 
@@ -163,7 +170,7 @@ eureka:
 ```java
 @EnableEurekaClient  ///本服务启动后会自动注册进eureka服务中
 @SpringBootApplication
-@EnableDiscoveryClient  //服务发现
+@EnableDiscoveryClient  //服务发现(可以获取其他服务)
 public class UserServiceApplication {
 
     public static void main(String[] args) {
@@ -194,23 +201,7 @@ public class UserController {
 
 和创建  user-service 一样，创建 order-service。其配置文件如下：
 
-* *pom.xml*
-
-```xml
-<!--eureka 服务端-->
-<dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-netflix-eureka-client</artifactId>
-</dependency>
-
-<!--eureka 客户端-->
-<dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-netflix-eureka-client</artifactId>
-</dependency>
-```
-
-
+- *application.yml*
 
 ```yml
 server:
@@ -242,13 +233,13 @@ eureka:
 
 Http请求访问是 RESTful 形式（基于资源的请求）。
 
-* 在 user-service 的 *pom.xml* 文件，导入 Ribbon 的启动器。
+- 在 user-service 的 *pom.xml* 文件，导入 Ribbon 的启动器。
 
 ```xml
-<!--负载均衡启动器-->
+<!--负载均衡 启动器-->
 <dependency>
     <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-ribbon</artifactId>
+    <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
 </dependency>
 ```
 
@@ -258,9 +249,9 @@ Http请求访问是 RESTful 形式（基于资源的请求）。
 @Configuration 
 public class Beans {
     @Bean
-    @LoadBalanced
+    @LoadBalanced  //启动负载均衡，
     public RestTemplate restTemplateBean(){
-        return new RestTemplate();  //默认使用轮序访问法
+        return new RestTemplate();  //RPC类（默认使用轮序访问法） 
     }
 }
 ```
@@ -285,7 +276,7 @@ public class UserController {
     public String findOrderById(@PathVariable("orderId") long orderId){
         
         //template.getForObject( 请求路径, 期望的类型，参数 )  RestTemplate的使用
-        String str = template.getForObject("http://"+ HTTP_URL+"/order",String.class,orderId);
+        String str = template.getForObject("http://"+ HTTP_URL+"/order/"+orderId,String.class);
         return str;
     }
 
@@ -331,11 +322,11 @@ public class OrderController {
 <!--熔断保护启动器-->
 <dependency>    
     <groupId>org.springframework.cloud</groupId>    
-    <artifactId>spring-cloud-starter-hystrix</artifactId>    
+    <artifactId>spring-cloud-starter-netflix-hystrix</artifactId> 
 </dependency>
 ```
 
-* 在 *UserController.java* 编写指定处理方法
+- 在 *UserController.java* 编写指定处理方法
 
 ```java
 @RestController
@@ -351,17 +342,14 @@ public class UserController {
         return "successful deployment";
     }
     
-
     @HystrixCommand(fallbackMethod = "handlerError")  //指定处理的方法
     @GetMapping("/user/{orderId}")
     public String findOrderById(@PathVariable("orderId") long orderId){
-        //template.getForObject( 请求路径, 期望的类型，参数 )  RestTemplate的使用
-        String str = template.getForObject("http://"+ HTTP_URL+"/order",String.class,orderId);
+        //template.getForObject( 请求路径, 期望的类型，参数)  RestTemplate的使用
+        String str = template.getForObject("http://"+ HTTP_URL+"/order/"+orderId,String.class);
         return str;
     }
 
-    
-    
     @GetMapping("/user/orders")
     public String getOrders(){
         return template.getForObject("http://"+HTTP_URL+"/orders",String.class);
@@ -374,7 +362,7 @@ public class UserController {
 }
 ```
 
-* 然后在程序的入口指定类，加 *@Hystrix* 注解
+- 然后在程序的入口指定类，加 *@Hystrix* 注解
 
 ```java
 @EnableEurekaClient  ///本服务启动后会自动注册进eureka服务中
@@ -449,14 +437,13 @@ feign:  #开启熔断
 
 **7、网关 Zuul**
 
-和之前建立 user-service 一样，新建一个 modul ： zuul-service ，在 *pom.xml* 文件导入 网关启动器。
+和之前建立 user-service 一样，新建一个 module： zuul-service ，选择网关。
 
 ```xml
 <!--网关启动器-->
 <dependency>
     <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-zuul</artifactId>
-    <version>1.4.7.RELEASE</version>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 </dependency>
 ```
 
@@ -482,6 +469,7 @@ zuul:
     api-a:   #第一个请求路径
       path: /user/**
       service-id: User-Service
+      #strip-prefix: false 是否使用前缀 默认为true，是不使用
     api-b:   #第二个请求路径
       path: /order/**
       service-id: Order-Service
@@ -508,4 +496,3 @@ public class ZuulServiceApplication {
 最后贴一张项目工程目录图：
 
 ![项目工程图](https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring%20cloud/images/%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B%E5%9B%BE.png)
-
