@@ -68,12 +68,12 @@ mysql 官方文档有几句话：
 
 根据最后两个小点，我们大致可以画出这样一个图：
 
-![redo log]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/redo%20log.png](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/redo log.png))
+![redo log](https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/redo_log.png)
 
 另外还有两个参数：
 
-* *innodb_log_file_size* : 设置每个 redo log 文件的大小，默认是 50331648 byte ，也就是 48 m
-* *innodb_log_files_in_group* : 设置每个 redo log 文件的数量，默认是 2，最大值是 100
+- *innodb_log_file_size* : 设置每个 redo log 文件的大小，默认是 50331648 byte ，也就是 48 m
+- *innodb_log_files_in_group* : 设置每个 redo log 文件的数量，默认是 2，最大值是 100
 
 常说事务具有 ACID 四个特性，其中 D（durability），数据持久性，意味着，**一旦事务提交，它的状态就必须保持提交，不能回滚**，哪怕你系统宕机了、奔溃了，你也要想办法把事务做到提交，把数据给我保存进去：
 
@@ -95,7 +95,7 @@ update user set age = 18 where user_id = 345981
 
 在这条 update 语句执行的时候，除了生成 redo log，还会生成 binlog。binlog 和 redo log 有很多不同点，有一点是一定要知道的：就是 redo log 知识 innodb 存储引擎的功能，而 binlog 是 mysql  server 层的功能，也就是说：redo log 只在使用了 innodb 引擎的 mysql 上才有，而 binlog 是 mysql 有的，无论使用了什么引擎。
 
-![innodb 引擎]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/innodb%20%E5%BC%95%E6%93%8E.png](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/innodb 引擎.png))
+![innodb 引擎](https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/innodb%E5%BC%95%E6%93%8E.png)
 
 那 binlog 有什么作用呢？
 
@@ -132,10 +132,10 @@ binlog 还有另一个作用：**主从复制**，主库把 binlog 发给从库�
 
 而两阶段提交，就解决这个问题，crash recovery 时：
 
-* 如果 redo log 已经 commit，那毫不犹豫的，把事务提交
-* 如果 redo log 处于 prepare，则去判断事务对应的 binlog 是不是完整的
-  * 是，则把事务提交
-  * 否，则事务回滚
+- 如果 redo log 已经 commit，那毫不犹豫的，把事务提交
+- 如果 redo log 处于 prepare，则去判断事务对应的 binlog 是不是完整的
+  - 是，则把事务提交
+  - 否，则事务回滚
 
 两阶段提交，其实是为了保证 redo log 和 binlog 的逻辑一致性。
 
@@ -145,9 +145,9 @@ binlog 还有另一个作用：**主从复制**，主库把 binlog 发给从库�
 
 总结一下 ：
 
-* redo log：innodb 在实现高性能写数据的同时，利用  redo log，实现了事务 ACID 中的 D：持久性
-* binlog：mysql 的数据还原、主从复制，都依赖 binlog 来实现
-* 两阶段提交：为了保证 redo log 和 binlog 的一致性
+- redo log：innodb 在实现高性能写数据的同时，利用  redo log，实现了事务 ACID 中的 D：持久性
+- binlog：mysql 的数据还原、主从复制，都依赖 binlog 来实现
+- 两阶段提交：为了保证 redo log 和 binlog 的一致性
 
 看似一条简单的 update 语句，MySQL 在这背后其实做了很多事情。
 
@@ -159,7 +159,7 @@ MySQL 是一个把单机性能发挥到极致的数据库，这也是为什么�
 
 其实两阶段提交是经典的分布式系统问题，很多分布式系统也在用，包括上面讲的两阶段提交也只是一个粗略的提交过程，拆分的再细一点，应该是这样：
 
-![两段提交]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E4%B8%A4%E6%AE%B5%E6%8F%90%E4%BA%A4.png](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/两段提交.png))
+![两段提交](https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E4%B8%A4%E6%AE%B5%E6%8F%90%E4%BA%A4.png)
 
 我们后面可以再深入研究下。
 
@@ -169,7 +169,7 @@ MySQL 是一个把单机性能发挥到极致的数据库，这也是为什么�
 
 最后再贴一张 innodb 架构图：
 
-![img]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/innodb%E6%9E%B6%E6%9E%84%E5%9B%BE.png](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/innodb架构图.png))
+![img](https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/innodb%E6%9E%B6%E6%9E%84%E5%9B%BE.png)
 
 今天其实只讲了这张图的右边的 redo log，其他的像 change buffer、double write buffer、undo log、log buffer 等等，都是些什么？
 
