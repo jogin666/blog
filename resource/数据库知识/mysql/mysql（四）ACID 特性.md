@@ -1,4 +1,4 @@
-## mysql（四）ACID
+## mysql（四）ACID 特性
 
 #### 1、前言
 
