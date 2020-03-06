@@ -136,21 +136,14 @@
 **2、Mybatis**
 
 - [Mybatis篇章（一）入门篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（一）入门篇.md)
-
 - [Mybatis篇章（二）动态sql语句与注解](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（二）动态sql与注解.md)
-
 - [Mybatis篇章（三）映射文件](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（三）映射文件.md)
-
 - [Mybatis篇章（四）表关联](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（四）表关联.md)
-
 - [Mybatis篇章（五）缓存篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（五）缓存篇.md)
-
 - [Mybatis篇章（六）Spring整合](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（六）spring整合.md)
-
 - [Mybatis篇章（七） 常见面试题](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（七）面试题.md)
 
   
-
 ### 五、Spring Family
 
 **1、Spring**
