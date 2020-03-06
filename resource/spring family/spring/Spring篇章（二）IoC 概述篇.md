@@ -8,17 +8,17 @@
 
 **1.1、IoC （Inverse of Control）：控制反转**
 
-* 读作 “反转控制”，可能更好了解，其不是什么技术，而是一种设计思想，就是将原本程序中手动创建对象的控
+- 读作 “反转控制”，可能更好了解，其不是什么技术，而是一种设计思想，就是将原本程序中手动创建对象的控
 
   制权，交由Spring框架来管理。
 
-* 正控：若要使用某个对象，需要自己去负责对象的创建
+- 正控：若要使用某个对象，需要自己去负责对象的创建
 
-* 反控：若要使用某个对象，只需要从 Spring 容器中获取需要使用的对象，不关心对象的创建过程，也就是把
+- 反控：若要使用某个对象，只需要从 Spring 容器中获取需要使用的对象，不关心对象的创建过程，也就是把
 
   创建对象的控制权反转给了Spring框架
 
-* 好莱坞法则：Don’t call me ,I’ll call you
+- 好莱坞法则：Don’t call me ,I’ll call you
 
 **1.2、举个例子**
 
@@ -78,31 +78,31 @@ ApplicationContext 是 BeanFactory 的子接口之一，换句话说：BeanFacto
 
 类中提供了哪些方法：
 
-![BeanFactory]([https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring/images/BeanFactory.png](https://github.com/jogin666/blog/blob/master/resource/spring family/spring/images/BeanFactory.png))
+![BeanFactory](https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring/images/BeanFactory.png)
 
-* BeanFactory 提供了对应了多个 getBean(...) 方法来获取在 Spring IoC 容器装配的 Bean。
+- BeanFactory 提供了对应了多个 getBean(...) 方法来获取在 Spring IoC 容器装配的 Bean。
 
-  *  按照类型获取 bean：factory.getBean(Bean.class); 	
+  - 按照类型获取 bean：factory.getBean(Bean.class); 	
 
     **注意：**高方法要求在 Spring IoC 容器中只配置了一个这种类型的实例，否则报错。(不知道获取哪一个)
 
-  * 按照 bean 的名字获取bean：factory.getBean("beanName");   
+  - 按照 bean 的名字获取bean：factory.getBean("beanName");   
 
     **注意**：这种方法不太安全，因为IDE 不会检查其安全性（关联性） 
 
-  * 按照名字和类型获取 bean： factory.getBean("beanName", Bean.class); （推荐使用）
+  - 按照名字和类型获取 bean： factory.getBean("beanName", Bean.class); （推荐使用）
 
-* isSingleton(....) ：用于判断是否单例，如果判断为真，表示该 Bean 在容器中是作为一个唯一单例存在的。
+- isSingleton(....) ：用于判断是否单例，如果判断为真，表示该 Bean 在容器中是作为一个唯一单例存在的。
 
-* isPrototype(....)：用于判断是否是多例，如果判断为真，表示每从容器中获取 Bean 时，容器就生成一个新的
+- isPrototype(....)：用于判断是否是多例，如果判断为真，表示每从容器中获取 Bean 时，容器就生成一个新的
 
   实例。 
 
   > 注意在默认情况下，isSingleton 为 ture，而 isPrototype 为 false
 
-* getType(....)： 按 Java 类型匹配的方式获取。
+- getType(....)： 按 Java 类型匹配的方式获取。
 
-* getAliases(....)：获取装备 bean时设置的别名
+- getAliases(....)：获取装备 bean时设置的别名
 
 以上就是 Spring IoC 最底层的设计，所有关于 Spring IoC 的容器将会遵守它所定义的方法。使用 BeanFactroy 的
 
@@ -178,19 +178,19 @@ BeanFactory beanFactory = new XmlBeanFactory(resourc
 
 **2.4、ApplicationContext 常见的实现类**
 
-* ClassPathXmlApplicationContext： 读取 classpath 中的资源
+- ClassPathXmlApplicationContext： 读取 classpath 中的资源
 
   ```java
   ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
   ```
 
-* FileSystemXmlApplicationContext：读取指定路径的资源
+- FileSystemXmlApplicationContext：读取指定路径的资源
 
   ```java
   ApplicationContext ac = new               FileSystemXmlApplicationContext("c:/applicationContext.xml");
   ```
 
-* XmlWebApplicationContext： 需要在Web的环境下才可以运行
+- XmlWebApplicationContext： 需要在Web的环境下才可以运行
 
   ```java
   XmlWebApplicationContext ac = new XmlWebApplicationContext(); // 这时并没有初始化容器
@@ -199,7 +199,7 @@ BeanFactory beanFactory = new XmlBeanFactory(resourc
   ac.refresh(); // 初始化容器
   ```
 
-* AnnotationConfigApplicationContext：读取指定扫描的包中的使用注解的类或扫描指定的类
+- AnnotationConfigApplicationContext：读取指定扫描的包中的使用注解的类或扫描指定的类
 
   ```java
   public void testConfig(){
@@ -212,7 +212,7 @@ BeanFactory beanFactory = new XmlBeanFactory(resourc
   }
   ```
 
-* AnnotationConfigWebApplicationContext：读取指定扫描的包中的使用注解的类或扫描指定的类（专门为
+- AnnotationConfigWebApplicationContext：读取指定扫描的包中的使用注解的类或扫描指定的类（专门为
 
   Web 准备，使用方式和 AnnotationConfigApplicationContext 类似）。
 
@@ -226,9 +226,9 @@ BeanFactory beanFactory = new XmlBeanFactory(resourc
 
 - **ApplicationContext：**
 
-  * 继承了 BeanFactory，拥有了基本的 IoC 功能；
+  - 继承了 BeanFactory，拥有了基本的 IoC 功能；
 
-  * 除此之外，ApplicationContext 还提供了其他功能：① 支持国际化；② 支持消息机制；③ 支持统一的资
+  - 除此之外，ApplicationContext 还提供了其他功能：① 支持国际化；② 支持消息机制；③ 支持统一的资
 
     源加载；   ④ 支持AOP功能；
 
@@ -242,15 +242,15 @@ Spring 的一系列行为是很有帮助的。IoC 容器装配 Bean，分为两�
 
 - Bean 的定义分为 3 步：
 
-  * Resource 定位
+  - Resource 定位
 
   > Spring IoC 容器先根据开发者的配置，进行资源的定位，在 Spring 的开发中，通过 XML 或者注解都是十分常见的方式，定位的内容是由开发者提供的。
 
-  * BeanDefinition 的载入
+  - BeanDefinition 的载入
 
   > 将 Resource 定位到的信息，保存到 Bean 定义（BeanDefinition）中，此时并不会创建 Bean 的实例
 
-  * BeanDefinition 的注册
+  - BeanDefinition 的注册
 
   > 将 BeanDefinition 的信息发布到 Spring IoC 容器中,**但注意**：此时仍然没有对应的 Bean 的实例。
 
@@ -258,7 +258,7 @@ Spring 的一系列行为是很有帮助的。IoC 容器装配 Bean，分为两�
 
 就是没有注入其配置的资源给 Bean，Bean 还不能完全使用。
 
-* 初始化和依赖注入
+- 初始化和依赖注入
 
   对于初始化和依赖注入，Spring Bean 还有一个配置选项：lazy-init（是否初始化发布到 Spring IoC 的
 
@@ -268,4 +268,4 @@ Spring 的一系列行为是很有帮助的。IoC 容器装配 Bean，分为两�
 
   
 
-IoC 篇章完结。
+IoC概述篇完结。
