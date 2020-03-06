@@ -115,16 +115,11 @@
 **2、Mysql 数据库**
 
 - <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/mysql%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md">mysql（一）基础知识</a>
-
 - <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/mysql%EF%BC%88%E4%BA%8C%EF%BC%89%E6%8C%81%E4%B9%85%E6%80%A7%E7%9A%84%E5%AE%9E%E7%8E%B0.md">mysql（二）持久性的实现</a>
-
 - <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/mysql%EF%BC%88%E4%B8%89%EF%BC%89%E8%B0%88%E8%B0%88%E7%B4%A2%E5%BC%95.md">mysql（三）谈谈索引</a>
-
 - <a href="https://github.com/jogin666/blog/edit/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/mysql%EF%BC%88%E5%9B%9B%EF%BC%89ACID%20%E7%89%B9%E6%80%A7.md">mysql（四）ACID 特性</a>
-
 - <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/mysql%EF%BC%88%E4%BA%94%EF%BC%89%E9%9D%A2%E8%AF%95%E9%A2%98.md">mysql（五）面试题</a>
 
-  
 
 ### 四、持久层框架
 
