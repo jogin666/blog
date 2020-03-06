@@ -501,7 +501,7 @@ public class ZuulServiceApplication {
 }
 ```
 
-启动服务之后，在浏览器输入  *localhost:8889/user/orders* 仍可以访问到。
+启动服务之后，在浏览器输入  *localhost:8080/user/orders* 仍可以访问到。
 
 
 
