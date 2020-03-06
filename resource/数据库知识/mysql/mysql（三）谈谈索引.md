@@ -1,0 +1,185 @@
+## mysql（三）谈谈索引
+
+#### 1、前言
+
+最近在学习 mysql 数据库方面的知识，看了很多介绍索引的文章，遂而想着自己也动手整理一下看过的知识。
+
+#### 2、索引的选择
+
+索引的存在，就是为提高数据查询的效率的。在绝大多数情况下，mysql 索引都是基于 B+ 树的，为啥说是大多数呢？因为在 mysql 中还存在其他的类型索引数据结果：*HASH，R-tree*.....。
+
+> 在 mysql 数据库中，创建表的时候，即使不创建索引，mysql 会默认以主键作为聚簇索引；如果没有主键， 则 mysql 会以唯一键创建索引；如果连唯一键也没有，则 mysql 会自主创建一个隐藏 row，作为自增主键，创建索引。
+
+既然索引的存在是为了提高查询的效率，那为啥，mysql 唯独钟爱 B+ 数呢？为啥不选择其他的也是可以快速精确定位的数据结构，例如：HASH，二叉数，B 树等。为了解决这个问题，需要一个个来探讨这些数据结构看其优点与缺点。
+
+
+
+* 无序 HASH （哈希表）
+
+先来看一下下面的动图
+
+![HASH]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/HASH.gif](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/HASH.gif))
+
+ 																	（图片来源参考资料）
+
+学过哈希表的，都知道元素存放到哈希表数组的位置（下标）是根据哈希算法算出来的。因为是根据算法算出来的下标，所以极有可能会出现哈希表冲突（计算出相同的存放地址），为解决这一问题。图中使用的是链地址法。假设 mysql 采用哈希表存放数据，现执行（ username 为索引）：
+
+```sql
+select * from user where username="xiaoming"
+```
+
+则会对 ‘’username“ 按哈希算法算出来一个地址，然后根据地址，从哈希表中取出指向数据所在位置的地址，进而根据地址，获取 username=”xiaoming“ 的数据，十分快捷。
+
+ 那么如果现在执行下面的 sql 语句（age 为索引）：
+
+```sql
+select * from user where age>18
+```
+
+哈希表是无法快速查询到数据的，因为哈希表只能（无序）精确查询，所以只能进行对表进行全部扫描，逐行判断是否满足条件。
+
+
+
+* 有序 HASH（哈希表）
+
+因为是有序的哈希表，所以其使支持范围查询的（数据有序）。但是不适用于存储会变化的数据，因为增删操作之后，会将结点进行后移或者迁移，成本很高，在秒杀系统中，这哪能扛得住啊。
+
+>随表说一下，这两哈希表的较常用的场景：对于无序的哈希表，多用于等值查询的场景，例如 Redis、Memcached 等这些NoSQL的中间件，就是使用哈希表的。而对于有序的哈希表，用来保存静态数据，者进很 nice 的，或者用来做静态存储引擎也是可以的。
+
+
+
+* 二叉搜索树
+
+先来看一下，二叉搜索树新增一个节点的动态图：
+
+![二叉树]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E4%BA%8C%E5%8F%89%E6%A0%91.gif](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/二叉树.gif))
+
+ 																	（图片来源参考资料）
+
+基于上面的动图，可以知道二叉搜索是有序的，所以是支持范围查询的。那为啥不选用二叉搜索树呢？对于这个问题，要从索引的存储出发，索引不仅仅是在内存里面存储的，而且也是要落盘持久化的。
+
+上图中的数据没有多少，但树的高度就为 5 了。如果有更多的数据，树就会更高。而查询的成本就会随着树高的增加而增加（每比较一次，就需要磁盘 IO 一次，如果更加极端化，搜索树退化成链表的话，这，这，谁顶得住啊）。
+
+
+
+* 二叉平衡树
+
+既然搜索树不行，二叉平衡树呢？虽然二叉平衡树，可以减少树的高度，也这是由于这一点，为保持平衡，在每增删一个结点之后，就需要进行大量的操作。于是就出现了和有序哈希表一样的问题，所以不可选。
+
+
+
+* B 树 和 B+ 数
+
+先来看一下 B 树新增一个节点的过程图（假设每个结点最大存储为 2）：
+
+![B 树]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/B%20%E6%A0%91.png](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/B 树.png))
+
+ 从图中可以得知，B 树是比二叉平衡树要 “矮” 的，因为 B 树中的一个节点可以存储多个元素，所以查搜索数据的时候，可以避免过多的磁盘 IO， 因此 B 树  是一个可以用作索引的数据结构。那为啥不用 B+ 树呢？先来看一下 B 树新增一个节点的过程图（假设每个结点最大存储为 2）：
+
+![B + 树](D:\Typora\projects\数据库\mysql\image\B + 树.png)
+
+图片上的过程，体现维护 B+ 树的特点：
+
+- 有序：左边节点比右边小（有序）
+- 自平衡：左右两边数量趋于相等
+- 节点分裂：节点在遇到元素数量超过节点容量时，会产生分裂（这也是 mysql页分裂的原理）
+
+- ........
+
+从上图可以得知 B+ 树是 B 树的升级版，其数据结构和 B 树类似，但又不一样，因为 B + 树中的非叶子节点会冗余一份在叶子节点中，并且叶子节点之间用指针相连。
+
+同时 B 树的结点会存储一条完整的数据（虽然图中没有表示），而 B + 树的结点是只会存储一个数据，非叶子结点存储一个用于比较的值（作为索引的值），叶子节点则存储的是数据地址或者聚簇索引。（如果是聚簇索引，则存储是数据的地址，辅助索引则存储的是聚簇索引）。
+
+
+
+其实 B+ 树不同于 B 树的这两点就是 mysql 选择 B + 树作为索引的原因。 B + 树中的非叶子节点会冗余一份在叶子节点中，且叶子节点间用指针相连，这样可以提高范围查询的效率，树的结点不存储数据，便于统一管理数据。
+
+
+
+#### 3、二级索引
+
+在说二级索引之前，先说一下聚簇索引，聚簇索引就是：物理磁盘上的数据的物理存储顺序，而非聚簇索引是逻辑上的，一个表最多只能有一个聚簇索引，所以聚簇索引能加快查询的效率（主键或唯一键）。
+
+假设现在有一张 user 表，其主键是 user_id (聚簇索引)，如果想根据姓名查询时，mysql 会怎样查询数据？
+
+```sql
+select * from user where username="Tom2"
+```
+
+由于表的数据并没有按照姓名进行组织，所以只能全表扫描。如不想全表扫描，那就需要给姓名字段也建个索引，让数据按照姓名有规律的进行组织：
+
+```sql
+create index idx_username on user(username);
+```
+
+在为 username 创建索引之后，，mysql 会建一棵新的 B+树：
+
+![二级索引]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95.png](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/二级索引.png))
+
+新建立以 username 为为索引的 B+ 树其实就是辅助索引，也称为二级索引，其叶子节点只存储聚簇索引，使用二级索引查询到聚簇索引之后，然后根据聚簇索引去磁盘获取数据，这一过程和回表有些类似（从辅助搜索获取到关键关键字，然后使用关键字回到主要搜索，搜索到内容的搜索过程，就是回表）。
+
+
+
+#### 4、复合索引
+
+复合索引，就是以多个字段为关键字创建一个索引，例如：以 username 和 age 创建复合索引
+
+```sql
+create index idx_username_age on user(username,age);
+```
+
+创建上面的索引之后，mysql 就又会创建新的 B+ 树：
+
+![复合索引]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E5%A4%8D%E5%90%88%E7%B4%A2%E5%BC%95.png](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/复合索引.png))
+
+值得注意的是：**如果 username 是相同的，则 mysql 则会按照 age 的值比较排序（保证数据的有序性）**。为啥是不是先比较 age，在比较 username 呢？ 这就涉及到了最左匹配原则了：
+
+* 在创建聚合索引中，mysql 会按照聚合索引中的字段，从左到右顺序，比较第一个之后，在比较第二个，......，这样的规则创建 B+ 树。
+* 在聚合索引匹配中，只有之前的字段全部命中之后（比较等值），才会进一步匹配下一个复合索引中的字段，遇到范围查询 (>、<、between、like左匹配)等就**不能进一步匹配**了，后续退化为线性查找。
+
+> 如有符合索引 (a,b,c,d)，查询条件 a=1 and b=2 and c>3 and d=4，则会在每个节点依次命中a、b、c，无法命中d。(c已经是范围查询了，d肯定是排不了序了)。
+>
+> 在多说一下：对于复合索引，只有查询条件是以第一个字段为开始的的条件下，才会走索引，例如：a，ab，ac，abcd 的条件是会走索引的（其中 ac 和 a 启用的是 a 索引），反之是不会走索引的。
+
+#### 5、覆盖索引
+
+在二级索引中，说到了回表，而解决回表问题就是覆盖索引，那啥事覆盖索引呢？覆盖索引就是：查询的字段被全部在覆盖索引中，通过覆盖索引就可以拿到的数据，就不会走回表了。例如：现有复合索引（a,b,c）,在执行下述语句时，是不会启动回表的：
+
+```sql
+select b,c from table where a=1
+```
+
+覆盖索引可以减少树的搜索次数，提升性能，他也是我们在实际开发过程中经常用来优化查询效率的手段。很多复合索引的建立，就是为了支持覆盖索引，特定的业务能极大的提升效率。
+
+#### 6、页
+
+在 mysq 中，数据的存储是以 页 为单位的，所以 **B+树中一个节点为一页或页的倍数最为合适**。
+
+因为如果一个节点的大小小于1页，那么读取这个节点的时候其实也会读出1页，造成资源的浪费。如果一个节点的大小大于1页，比如1.2页，那么读取这个节点的时候会读出2页，也会造成资源的浪费。
+
+所以为了不造成浪费，所以最后把一个节点的大小控制在1页、2页、3页、4页等倍数页大小最为合适。
+
+看一下 mysql 中页的结构：
+
+![页]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E9%A1%B5.png](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/页.png))
+
+![页（1）](D:\Typora\projects\数https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E9%A1%B5%EF%BC%881%EF%BC%89.png据库\mysql\image\页（1）.png) 																	（图片来源参考资料）
+
+在 mysql 的页中，每一页都会有一个页目录，记录页中每条记录的关键字信息，在通过**主键**查找某条记录的时候就在页目录中使用**二分法快速定位**到对应的槽，然后再遍历该槽对应分组中的记录即可快速找到指定的记录。
+
+在 B+ 树的结点中：mysql 会将**各个数据页**组成一个**双向链表**，**将每个数据页中的每一条记录**组成一个**单向**链表。
+
+这样以**其他列**(非主键)作为搜索条件：可以从最小记录开始**依次遍历单链表中的每条记录**。
+
+
+
+完结。
+
+参考资料：
+
+<a herf="https://mp.weixin.qq.com/s?__biz=MzAwNDA2OTM1Ng==&mid=2453141553&idx=2&sn=c265c93d611a420a291f2680d86781fc&chksm=8cf2dab2bb8553a40cb672ed13fb76903136e44dd1a4d443b83d2d8f85b9e936faa4c7e3addc&mpshare=1&scene=23&srcid=&sharer_sharetime=1582186145327&sharer_shareid=a8ee705dc28d6aaab271b797da5bc9c5#rd">MySQL的索引是怎么加速查询的？</a>
+
+<a herf="https://mp.weixin.qq.com/s?__biz=MzAwNDA2OTM1Ng==&mid=2453141549&idx=1&sn=19cc83341aea9a65b7bb639a3a994c7f&chksm=8cf2daaebb8553b80c3f1fe53d829f7f41e9f1be9498b190f4fab57106aba214dfd7836b83c6&mpshare=1&scene=23&srcid=&sharer_sharetime=1582186102274&sharer_shareid=a8ee705dc28d6aaab271b797da5bc9c5#rd">《爱上面试官》系列-数据库索引</a>
+
+<a hef="https://mp.weixin.qq.com/s?__biz=MzUzMjczMzY5MQ==&mid=2247483745&idx=1&sn=37bc9d5a2452150316c1dbf7244eda00&chksm=faaf8af5cdd803e3bea1b1e027ad5e5ed23790fad52a5b13167590d7fbb545507435b900d605&mpshare=1&scene=23&srcid=0220J9c4QXo476JIB6RBaTOc&sharer_sharetime=1582186062577&sharer_shareid=a8ee705dc28d6aaab271b797da5bc9c5#rd">Mysql索引简明教程</a>
+
