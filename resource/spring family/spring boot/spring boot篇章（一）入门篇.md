@@ -8,9 +8,9 @@
 
 #### 2、 spring boot 是什么
 
-* 是 spring 技术栈的一个大整合
-* 简化 spring 应用开发的一个框架
-* j2EE 开发的一站式解决方案
+- 是 spring 技术栈的一个大整合
+- 简化 spring 应用开发的一个框架
+- j2EE 开发的一站式解决方案
 
 > 通俗易懂来说就是：
 >
@@ -19,9 +19,9 @@
 
 #### 3、spring boot 的优势
 
-* 无配置的集成主流框架
-* 简单、快捷地搭建项目，无关过多的配置
-* 极大提高了开发、部署效率。
+- 无配置的集成主流框架
+- 简单、快捷地搭建项目，无关过多的配置
+- 极大提高了开发、部署效率。
 
 
 
@@ -29,34 +29,34 @@
 
 **4.1、使用 idea 新建项目**
 
-* 选择 spring initializr ，然后选择默认的 url 点击【Next】：
+- 选择 spring initializr ，然后选择默认的 url 点击【Next】：
 
 ![1](https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring%20boot/images/1.png)
 
-* 修改一下醒目的默认信息
+- 修改一下醒目的默认信息
 
 ![2](https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring%20boot/images/2.png)
 
-* 选择 web 启动器（这里提供 springboot 的所有启动器选择项，勾选自己所需的启动器，当然也可以之后，在 *pom.xml* 文件中导入）：
+- 选择 web 启动器（这里提供 springboot 的所有启动器选择项，勾选自己所需的启动器，当然也可以之后，在 *pom.xml* 文件中导入）：
 
 ![3](https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring%20boot/images/3.png)
 
-* 填写项目的信息，然后点击 【finish】，等待项目构建完成。
+- 填写项目的信息，然后点击 【finish】，等待项目构建完成。
 
 ![4](https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring%20boot/images/4.png)
 
-* 构成完的项目的目录结构如下：
+- 构成完的项目的目录结构如下：
 
 ![目录结构](https://github.com/jogin666/blog/blob/master/resource/spring%20family/spring%20boot/images/%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png)
 
 
 
-* *SpringBootApplication* ：项目启动类，带有 *public static void main（..）* 方法，用于启动项目
-* *static* 目录：是静态资源文件的目录（css，html，js）
-* *template* 目录：是 spring boot 支持的引擎模板存放的目录（spring boot 默认不再支持 jsp 文件了）
-* *application.properties*：一个空的 properties 文件，可以根据需要添加配置属性（如：数据库连接信息）
-* *SpringbootApplicationTests*：一个空的 Junit 测试类，它加载了一个使用 Spring Boot 字典配置功能的 Spring 应用程序上下文，用于单元测试（个人感觉相当于单元测试的启动类）。
-* *pom.xml* ：项目依赖构建文件
+- *SpringBootApplication* ：项目启动类，带有 *public static void main（..）* 方法，用于启动项目
+- *static* 目录：是静态资源文件的目录（css，html，js）
+- *template* 目录：是 spring boot 支持的引擎模板存放的目录（spring boot 默认不再支持 jsp 文件了）
+- *application.properties*：一个空的 properties 文件，可以根据需要添加配置属性（如：数据库连接信息）
+- *SpringbootApplicationTests*：一个空的 Junit 测试类，它加载了一个使用 Spring Boot 字典配置功能的 Spring 应用程序上下文，用于单元测试（个人感觉相当于单元测试的启动类）。
+- *pom.xml* ：项目依赖构建文件
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -143,7 +143,7 @@
 
 **4.2、 使用 maven 构建项目**
 
-* 1、访问 http://start.spring.io/
+- 1、访问 http://start.spring.io/
 
 - 2、选择构建工具 Maven Project、Java、Spring Boot 版本 2.2.4，选择相应的启动器，可参考下图所示：
 
@@ -190,9 +190,9 @@ public @interface RestController {
 
 > 在此说一下，spring boot 项目启动有三种方式：
 >
-> * 在idea中直接使用启动（最常用）
-> * 使用mvn 命令来启动
-> * 使用mvn编译，而后在class目录生成jar包，使用Java命令来启动
+> - 在idea中直接使用启动（最常用）
+> - 使用mvn 命令来启动
+> - 使用mvn编译，而后在class目录生成jar包，使用Java命令来启动
 
 然后打开浏览器，输入 *localhost:8080/hello* ,可以成功的显示数据。
 
