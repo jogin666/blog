@@ -1,3 +1,7 @@
+
+
+
+
 ## mysql（三）谈谈索引
 
 #### 1、前言
@@ -14,11 +18,11 @@
 
 
 
-* 无序 HASH （哈希表）
+- 无序 HASH （哈希表）
 
 先来看一下下面的动图
 
-![HASH]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/HASH.gif](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/HASH.gif))
+![HASH](https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/HASH.gif)
 
  																	（图片来源参考资料）
 
@@ -40,19 +44,19 @@ select * from user where age>18
 
 
 
-* 有序 HASH（哈希表）
+- 有序 HASH（哈希表）
 
 因为是有序的哈希表，所以其使支持范围查询的（数据有序）。但是不适用于存储会变化的数据，因为增删操作之后，会将结点进行后移或者迁移，成本很高，在秒杀系统中，这哪能扛得住啊。
 
->随表说一下，这两哈希表的较常用的场景：对于无序的哈希表，多用于等值查询的场景，例如 Redis、Memcached 等这些NoSQL的中间件，就是使用哈希表的。而对于有序的哈希表，用来保存静态数据，者进很 nice 的，或者用来做静态存储引擎也是可以的。
+> 随表说一下，这两哈希表的较常用的场景：对于无序的哈希表，多用于等值查询的场景，例如 Redis、Memcached 等这些NoSQL的中间件，就是使用哈希表的。而对于有序的哈希表，用来保存静态数据，者进很 nice 的，或者用来做静态存储引擎也是可以的。
 
 
 
-* 二叉搜索树
+- 二叉搜索树
 
 先来看一下，二叉搜索树新增一个节点的动态图：
 
-![二叉树]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E4%BA%8C%E5%8F%89%E6%A0%91.gif](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/二叉树.gif))
+![二叉树](https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E4%BA%8C%E5%8F%89%E6%A0%91.gif)
 
  																	（图片来源参考资料）
 
@@ -62,28 +66,27 @@ select * from user where age>18
 
 
 
-* 二叉平衡树
+- 二叉平衡树
 
 既然搜索树不行，二叉平衡树呢？虽然二叉平衡树，可以减少树的高度，也这是由于这一点，为保持平衡，在每增删一个结点之后，就需要进行大量的操作。于是就出现了和有序哈希表一样的问题，所以不可选。
 
 
 
-* B 树 和 B+ 数
+- B 树 和 B+ 数
 
 先来看一下 B 树新增一个节点的过程图（假设每个结点最大存储为 2）：
 
-![B 树]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/B%20%E6%A0%91.png](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/B 树.png))
+![B 树](https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/B%E6%A0%91.png)
 
  从图中可以得知，B 树是比二叉平衡树要 “矮” 的，因为 B 树中的一个节点可以存储多个元素，所以查搜索数据的时候，可以避免过多的磁盘 IO， 因此 B 树  是一个可以用作索引的数据结构。那为啥不用 B+ 树呢？先来看一下 B 树新增一个节点的过程图（假设每个结点最大存储为 2）：
 
-![B + 树](D:\Typora\projects\数据库\mysql\image\B + 树.png)
+![B + 树](https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/B%2B%E6%A0%91.png)
 
 图片上的过程，体现维护 B+ 树的特点：
 
 - 有序：左边节点比右边小（有序）
 - 自平衡：左右两边数量趋于相等
 - 节点分裂：节点在遇到元素数量超过节点容量时，会产生分裂（这也是 mysql页分裂的原理）
-
 - ........
 
 从上图可以得知 B+ 树是 B 树的升级版，其数据结构和 B 树类似，但又不一样，因为 B + 树中的非叶子节点会冗余一份在叶子节点中，并且叶子节点之间用指针相连。
@@ -114,7 +117,7 @@ create index idx_username on user(username);
 
 在为 username 创建索引之后，，mysql 会建一棵新的 B+树：
 
-![二级索引]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95.png](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/二级索引.png))
+![二级索引](https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95.png)
 
 新建立以 username 为为索引的 B+ 树其实就是辅助索引，也称为二级索引，其叶子节点只存储聚簇索引，使用二级索引查询到聚簇索引之后，然后根据聚簇索引去磁盘获取数据，这一过程和回表有些类似（从辅助搜索获取到关键关键字，然后使用关键字回到主要搜索，搜索到内容的搜索过程，就是回表）。
 
@@ -130,12 +133,12 @@ create index idx_username_age on user(username,age);
 
 创建上面的索引之后，mysql 就又会创建新的 B+ 树：
 
-![复合索引]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E5%A4%8D%E5%90%88%E7%B4%A2%E5%BC%95.png](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/复合索引.png))
+![复合索引](https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E5%A4%8D%E5%90%88%E7%B4%A2%E5%BC%95.png)
 
 值得注意的是：**如果 username 是相同的，则 mysql 则会按照 age 的值比较排序（保证数据的有序性）**。为啥是不是先比较 age，在比较 username 呢？ 这就涉及到了最左匹配原则了：
 
-* 在创建聚合索引中，mysql 会按照聚合索引中的字段，从左到右顺序，比较第一个之后，在比较第二个，......，这样的规则创建 B+ 树。
-* 在聚合索引匹配中，只有之前的字段全部命中之后（比较等值），才会进一步匹配下一个复合索引中的字段，遇到范围查询 (>、<、between、like左匹配)等就**不能进一步匹配**了，后续退化为线性查找。
+- 在创建聚合索引中，mysql 会按照聚合索引中的字段，从左到右顺序，比较第一个之后，在比较第二个，......，这样的规则创建 B+ 树。
+- 在聚合索引匹配中，只有之前的字段全部命中之后（比较等值），才会进一步匹配下一个复合索引中的字段，遇到范围查询 (>、<、between、like左匹配)等就**不能进一步匹配**了，后续退化为线性查找。
 
 > 如有符合索引 (a,b,c,d)，查询条件 a=1 and b=2 and c>3 and d=4，则会在每个节点依次命中a、b、c，无法命中d。(c已经是范围查询了，d肯定是排不了序了)。
 >
@@ -161,9 +164,9 @@ select b,c from table where a=1
 
 看一下 mysql 中页的结构：
 
-![页]([https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E9%A1%B5.png](https://github.com/jogin666/blog/blob/master/resource/数据库知识/mysql/images/页.png))
+![页](https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E9%A1%B5.png)
 
-![页（1）](D:\Typora\projects\数https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E9%A1%B5%EF%BC%881%EF%BC%89.png据库\mysql\image\页（1）.png) 																	（图片来源参考资料）
+![页（1）](https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/images/%E9%A1%B5%EF%BC%881%EF%BC%89.png) 																	（图片来源参考资料）
 
 在 mysql 的页中，每一页都会有一个页目录，记录页中每条记录的关键字信息，在通过**主键**查找某条记录的时候就在页目录中使用**二分法快速定位**到对应的槽，然后再遍历该槽对应分组中的记录即可快速找到指定的记录。
 
