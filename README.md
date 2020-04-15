@@ -6,13 +6,13 @@
 
 ### 一、Java基础知识回顾
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">泛型，枚举，注解，字符串</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">反射</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">时间 API</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">容器（List、Queue、Map、Set）</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">Java IO</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">Jdk 1.8 新特性</a>
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">并发（线程、锁）</a>
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95.md">泛型，枚举，注解，字符串</a>
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95.md">反射</a>
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95.md">时间 API</a>
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95.md">容器（List、Queue、Map、Set）</a>
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95.md">Java IO</a>
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95.md">Jdk 1.8 新特性</a>
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95.md">并发（线程、锁）</a>
 
 ### 二、数据结构与算法
 
