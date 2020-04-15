@@ -6,78 +6,19 @@
 
 ### 一、Java基础知识回顾
 
-**1、泛型，枚举，注解，字符串**
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">泛型，枚举，注解，字符串</a>
 
-- [基本类型与拆装箱](https://github.com/jogin666/blog/blob/master/resource/java/基本类型与拆装箱.md)
-- [String、StringBuilder、StringBuffer的学习](https://github.com/jogin666/blog/blob/master/resource/java/字符串比较.md)
-- [枚举 知识点回顾](https://github.com/jogin666/blog/blob/master/resource/java/枚举.md)
-- [泛型 知识点回顾](https://github.com/jogin666/blog/blob/master/resource/java/泛型.md)
-- [注解 知识点回顾](https://github.com/jogin666/blog/blob/master/resource/java/注解.md)
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">反射</a>
 
-**2、反射**
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">时间 API</a>
 
-- [Class类 学习](https://github.com/jogin666/blog/blob/master/resource/java/反射/Class.md)
-- [构造函数类（Constructor） 学习](https://github.com/jogin666/blog/blob/master/resource/java/反射/Constructor.md)
-- [方法类（Method） 学习](https://github.com/jogin666/blog/blob/master/resource/java/反射/Method.md)
-- [成员类（Field）学习](https://github.com/jogin666/blog/blob/master/resource/java/反射/Field.md)
-- [Java反射demo](https://github.com/jogin666/blog/blob/master/resource/java/反射/反射.md)
-- [类加载器 学习](https://github.com/jogin666/blog/blob/master/resource/java/反射/类加载器.md)
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">容器（List、Queue、Map、Set）</a>
 
-**3、时间API**
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">Java IO</a>
 
-- <a href="https://github.com/jogin666/blog/blob/master/resource/java/时间API/Java时间类 简单学习.md">Jdk8的时间类</a>
-- [SimpleDateFormat线程不安全](https://github.com/jogin666/blog/blob/master/resource/java/时间API/SimpleDateFormat线程不安全.md)
-- [Java时间任务和新计时姿势](https://github.com/jogin666/blog/blob/master/resource/java/时间API/Java时间任务和计时.md)
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">Jdk 1.8 新特性</a>
 
-**4、容器**
-
-- 集合
-  - [Collection 接口 介绍](https://github.com/jogin666/blog/blob/master/resource/java/集合/Collection.md)
-  - [ArrayList 深入源码学习](https://github.com/jogin666/blog/blob/master/resource/java/集合/ArrayList.md)
-  - [LinkedList 深入源码学习](https://github.com/jogin666/blog/blob/master/resource/java/集合/LinkedList.md)
-  - [PriorityQueue 深入源码学习](https://github.com/jogin666/blog/blob/master/resource/java/集合/PriorityQueue.md)
-  - [快速失败机制分析](https://github.com/jogin666/blog/blob/master/resource/java/集合/fast-fail.md)
-  - [CopyOnWrriteArrayList/Set 深入源码学习](https://github.com/jogin666/blog/blob/master/resource/java/集合/CopyOnWriteArrayList(Set).md)
-- map 和 set
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/Map.md">Map深入源码学习</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/map and set/HashMap.md">深入源码学习 HashMap</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/LinkedHashMap.md">深入源码学习 LinkedHashMap</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/TreeMap.md">深入源码学习 TreeMap</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/Set.md">Set 介绍</a>
-  - <a href="https://github.com/jogin666/blog/blob/master/resource/java/map%20and%20set/ConcurrentHashMap.md">ConcurrentHashMap深入源码学习</a> 
-
-**5、java IO**
-
-- [传统IO学习](https://github.com/jogin666/blog/blob/master/resource/java/IO/传统IO系统学习.md)
-- [NIO学习篇（一）文件操作](https://github.com/jogin666/blog/blob/master/resource/java/IO/NIO学习篇（一）文件操作.md)
-- [NIO学习篇（二）网络通信（1）](https://github.com/jogin666/blog/blob/master/resource/java/IO/NIO学习篇（二）网络通信(1).md)
-- [NIO学习篇（三）NIO 和 Epoll 的关联](https://github.com/jogin666/blog/blob/master/resource/java/IO/NIO学习篇（四）NIO%26epoll讲解.md)
-- [NIO学习篇（四）网络通信（2）](https://github.com/jogin666/blog/blob/master/resource/java/IO/NIO学习篇（三）网络通信(2).md)
-
-**6、jdk8 的新特性**
-
-- [Lambda表达式 和 函数式](https://github.com/jogin666/blog/blob/master/resource/java/jdk8的新特性/Lambda和函数式.md)
-- [数据集合流 Stream](https://github.com/jogin666/blog/blob/master/resource/java/jdk8的新特性/Stream.md)
-- [Optional类 深入源码学习](https://github.com/jogin666/blog/blob/master/resource/java/jdk8的新特性/Optional.md)
-- [接口的新特性](https://github.com/jogin666/blog/blob/master/resource/java/jdk8的新特性/接口的变化.md)
-
-**7、高并发**
-
-- 线程
-  - [多线程入门](https://github.com/jogin666/blog/blob/master/resource/java/并发/多线程/多线程入门.md)
-  - [深入源码学习 Thread](https://github.com/jogin666/blog/blob/master/resource/java/并发/多线程/Thread深入源码学习.md)
-  - [深入源码学习 ThreadLocal](https://github.com/jogin666/blog/blob/master/resource/java/并发/多线程/LocalThread学习.md)
-  - [线程池介绍](https://github.com/jogin666/blog/blob/master/resource/java/并发/多线程/线程池.md)
-  - [多线程的辅助工具类](https://github.com/jogin666/blog/blob/master/resource/java/并发/多线程/多线程的辅助工具类.md)
-  - [原子变量类介绍](https://github.com/jogin666/blog/blob/master/resource/java/并发/多线程/原子变量类(Atomic)学习.md)
-- 锁
-  - [synchronized 详解](https://github.com/jogin666/blog/blob/master/resource/java/并发/锁/synchronized详解.md)
-  - [学习同步器 AQS](https://github.com/jogin666/blog/blob/master/resource/java/并发/锁/AbstractQueuedSynchronizer详解.md)
-  - [AQS 子类介绍](https://github.com/jogin666/blog/blob/master/resource/java/并发/锁/AQS子锁介绍.md)
-  - [CLH锁和MCS锁介绍](https://github.com/jogin666/blog/blob/master/resource/java/并发/锁/CLH锁和MCS锁.md)
-  - [死锁介绍](https://github.com/jogin666/blog/blob/master/resource/java/并发/锁/死锁介绍.md)
-
-
+- <a href="https://github.com/jogin666/blog/blob/master/resource/java/Java%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%9B%AE%E5%BD%95">并发（线程、锁）</a>
 
 ### 二、数据结构与算法
 
@@ -117,9 +58,8 @@
 - <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/mysql%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md">mysql（一）基础知识</a>
 - <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/mysql%EF%BC%88%E4%BA%8C%EF%BC%89%E6%8C%81%E4%B9%85%E6%80%A7%E7%9A%84%E5%AE%9E%E7%8E%B0.md">mysql（二）持久性的实现</a>
 - <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/mysql%EF%BC%88%E4%B8%89%EF%BC%89%E8%B0%88%E8%B0%88%E7%B4%A2%E5%BC%95.md">mysql（三）谈谈索引</a>
-- <a href="https://github.com/jogin666/blog/edit/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/mysql%EF%BC%88%E5%9B%9B%EF%BC%89ACID%20%E7%89%B9%E6%80%A7.md">mysql（四）ACID 特性</a>
+- <a href="https://github.com/jogin666/blog/edit/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/mysql%EF%BC%88%E5%9B%9B%EF%BC%89ACID%20%E7%89%B9%E6%80%A7.md">mysql（四）ACID 特性</a>
 - <a href="https://github.com/jogin666/blog/blob/master/resource/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86/mysql/mysql%EF%BC%88%E4%BA%94%EF%BC%89%E9%9D%A2%E8%AF%95%E9%A2%98.md">mysql（五）面试题</a>
-
 
 ### 四、持久层框架
 
@@ -136,14 +76,21 @@
 **2、Mybatis**
 
 - [Mybatis篇章（一）入门篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（一）入门篇.md)
+
 - [Mybatis篇章（二）动态sql语句与注解](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（二）动态sql与注解.md)
+
 - [Mybatis篇章（三）映射文件](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（三）映射文件.md)
+
 - [Mybatis篇章（四）表关联](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（四）表关联.md)
+
 - [Mybatis篇章（五）缓存篇](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（五）缓存篇.md)
+
 - [Mybatis篇章（六）Spring整合](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（六）spring整合.md)
+
 - [Mybatis篇章（七） 常见面试题](https://github.com/jogin666/blog/blob/master/resource/持久层框架/Mybatis/Mybatis篇章（七）面试题.md)
 
   
+
 ### 五、Spring Family
 
 **1、Spring**
